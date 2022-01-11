@@ -1,0 +1,9 @@
+<a href="{{ item.link }}" class="tease rectangle card {% if loop.index is odd %} odd {% endif %}">
+	<div class="img-container">
+		<div class="card-img-top" style="background-image: url({{ Image(item.thumbnail).src|resize('1024') }})">
+		</div>
+		<div class="titleblock">
+			<h5>{{ item.title }} <br> <i class="fas fa-arrow-right"></i></h5>
+		</div>
+	</div>
+</a>

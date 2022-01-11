@@ -1,0 +1,52 @@
+{% for item in post.get_field('blokken') %}
+
+  {% set sectionno = sectionno + '1' %}
+ 
+	{% if item.acf_fc_layout == 'blog' %}
+		{% include 'pagebuilder/blog.twig' %}
+		
+	{% elseif item.acf_fc_layout == 'calltoaction' %}
+		{% include 'pagebuilder/calltoaction.twig' %}
+		
+  {% elseif item.acf_fc_layout == 'content' %}
+		{% include 'pagebuilder/content.twig' %}
+
+  {% elseif item.acf_fc_layout == 'foto_content' %}
+		{% include 'pagebuilder/foto-content.twig' %}
+		
+	{% elseif item.acf_fc_layout == 'big_link' %}
+		{% include 'pagebuilder/big-link.twig' %}
+	
+	{% elseif item.acf_fc_layout == 'foto_vullend' %}
+		{% include 'pagebuilder/foto-full.twig' %}
+	
+	{% elseif item.acf_fc_layout == 'foto_gallery' %}
+		{% include 'pagebuilder/foto-gallery.twig' %}
+	
+	{% elseif item.acf_fc_layout == 'foto_slider' %}
+		{% include 'pagebuilder/foto-slider.twig' %}	
+	
+	{% elseif item.acf_fc_layout == 'referenties' %}
+		{% include 'pagebuilder/referenties.twig' %}
+
+	{% elseif item.acf_fc_layout == 'klanten' %}
+		{% include 'pagebuilder/klanten.twig' %}
+
+	{% elseif item.acf_fc_layout == 'lead' %}
+		{% include 'pagebuilder/lead.twig' %}
+		
+  {% elseif item.acf_fc_layout == 'logos' %}
+		{% include 'pagebuilder/logos.twig' %}
+		
+	{% elseif item.acf_fc_layout == 'pageheader' %}
+		{% include 'pagebuilder/pageheader.twig' %}
+	
+	{% elseif item.acf_fc_layout == 'projecten' %}
+		{% include 'pagebuilder/projecten.twig' %}
+		
+	{% elseif item.acf_fc_layout == 'quote' %}
+		{% include 'pagebuilder/quote.twig' %}
+				
+  {% endif %}
+  
+{% endfor %}

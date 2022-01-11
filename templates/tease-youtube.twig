@@ -1,0 +1,6 @@
+<a href="{{ item.youtube_url }};autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0" data-fancybox class="tease card" >
+	<div class="img-container">
+		<div class="card-img-top" style="background-image: url({{ Image(item.thumbnail).src|resize('768') }})"></div>
+	</div>
+	<h5 class="altfont">{{ item.title }}</h5>
+</a>

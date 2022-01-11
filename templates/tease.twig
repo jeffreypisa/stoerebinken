@@ -1,0 +1,6 @@
+<a href="{{ item.link }}" class="tease card {% if item.achtergrond != 'lichtgrijs' %} {% endif %}" >
+	<div class="img-container">
+		<div class="card-img-top" style="background-image: url({{ Image(item.thumbnail).src|resize('768') }})"></div>
+	</div>
+	<h5 class="altfont">{{ item.title }}</h5>
+</a>

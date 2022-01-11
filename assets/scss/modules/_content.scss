@@ -1,0 +1,34 @@
+.mod-content {
+	p:last-child {
+		margin: 0;
+	}
+  figure {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+    img {
+	    max-width: 100%;
+			height: auto;
+			margin: 0;
+    }
+  }
+  img {
+    max-width: 100%;
+		height: auto;
+		margin: 20px 0;
+  }
+}
+
+.mod-content.section1 {
+	>.container {
+		padding-top: 30px;
+	}
+}
+
+@include media-breakpoint-up(md) {
+	.mod-content.section1 {
+		>.container {
+			padding-top: 60px;
+		}
+	}
+}

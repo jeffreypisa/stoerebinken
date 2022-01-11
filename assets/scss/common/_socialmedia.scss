@@ -1,0 +1,33 @@
+.followus {
+  display: block;
+  margin-bottom: 30px;
+  a {
+	  display: block;
+	  margin-right: 4px;
+	  border-radius: 100px;
+	  height: 30px;
+	  text-align: left;
+	  line-height: 30px;
+	  transition: all 0.3s;
+	  padding-left: 30px;
+	  color: #fff;
+    i {
+      font-size: 18px;
+      transition: all 0.3s;
+      color: $blue;
+      position: absolute;
+      top: 6px;
+      left: 0;
+    }
+    &:after {
+	    display: none;
+    }
+    &:hover {
+	    border-color: $blue;
+	    color: $blue;
+	    i {
+		    color: $blue;
+	    }
+    }
+  }
+}

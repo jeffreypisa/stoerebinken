@@ -1,0 +1,48 @@
+.card.tease.rectangle[href] {
+	height: calc( 100% - 30px );
+	border-radius: 4px;
+	i {
+		margin-bottom: -70px;
+    margin-top: 40px;
+    display: block;
+    transition: 0.2s ease-in-out;
+	}
+	.titleblock {
+		position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px 20px 20px;
+    z-index: 3;
+    
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.65+100 */
+background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */
+    h5 {
+    	color: #fff;
+    }
+	}
+	&:hover {
+		box-shadow: 0 30px 60px 0 rgba(0,0,0,0.60);	
+		i {
+			margin-bottom: 0;
+			margin-top: 20px;
+		}
+	}
+	h5 {
+		font-weight: 400;
+		margin: 10px 0 0;
+		padding-bottom: 6px;
+	}
+}
+
+@include media-breakpoint-up(md) {
+	.page .card.tease.rectangle[href] {
+		&.odd {
+			transform: translateY(60px);
+		}
+	}
+}
+

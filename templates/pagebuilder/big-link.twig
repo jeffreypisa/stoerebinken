@@ -1,0 +1,18 @@
+<section class="section{{ sectionno }} mod-biglink bg-{{ item.achtergrond }}" >
+
+	<a target="{{ item.knop.target }}" href="{{ item.knop.url }}">
+		<div class="bg1 bg-{{ item.achtergrond }}"> </div>
+		<div class="bg2 bg-{{ post.kleur_standaard_achtergrond }}"> </div>
+	  <div class="container">
+	    <div class="text-center">
+				{% if item.knop %}
+					<div class="text-center">
+						<div class="btn-link-big h2" style="color: {{ post.kleur_standaard_link }}">
+							{{ item.knop.title }}
+						</div>
+					</div>
+		    {% endif %}
+			</div>
+	  </div>
+	</a>
+</section>

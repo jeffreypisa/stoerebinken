@@ -1,0 +1,10 @@
+{% if taalmenu %}
+	<ul class="menu taalmenu">
+  	{% for item in taalmenu %}
+  		<li class="{{item.classes | join(' ')}} {% if item.title|lower == currentpostname %} current-menu-item {% endif %}">
+  			<a href="{{item.get_link}}">{{item.title}}</a>
+  			{% include "menu-taal.twig" with {'taalmenu': item.get_children} %}
+  		</li>
+  	{% endfor %}
+	</ul>
+{% endif %}

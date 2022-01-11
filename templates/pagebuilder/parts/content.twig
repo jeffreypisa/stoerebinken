@@ -1,0 +1,39 @@
+<div class="row">
+  <div class="col-md-10 col-lg-8 ">
+    {% if item.titel %}
+      <h2 class="h1xl">{{ item.titel }}</h2>
+    {% endif %}
+  </div>
+</div>
+{% if item.tekst %}
+  <div class="row">
+  	<div class="col-lg-2">
+  		{% if item.button %}
+    		<a class="btn-link d-none d-lg-inline-block" target="{{ item.button.target }}" href="{{ item.button.url }}" data-aos="fade-right" data-aos-duration="800">
+					{{ item.button.title }} 
+				</a>
+			{% endif %}
+  	</div>
+		<div class="col-md-10 col-lg-8">
+    	{{ item.tekst }}
+    	{% if item.kolommen %}
+		  	<br>
+		  	<div class="row">
+		  		<div class="col-md-6">
+		  			{{ item.kolom_1 }}
+		  			<br>
+		  		</div>
+		  		<div class="col-md-6">
+		  			{{ item.kolom_2 }}
+		  		</div>
+		  	</div>
+		  {% endif %}
+		</div>
+	</div>
+{% endif %}
+{% if item.button %}
+	<br>
+	<a class="btn-link d-lg-none" target="{{ item.button.target }}" href="{{ item.button.url }}">
+		{{ item.button.title }} 
+	</a>
+{% endif %}

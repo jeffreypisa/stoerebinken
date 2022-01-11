@@ -1,0 +1,45 @@
+{#
+/**
+ * Block Name: Link Intern
+ *
+ * This is the template that displays the example block.
+ */
+#}
+
+<div id="block-{{ block.id }}" class="mod-link">
+	<div class="row">
+		<div class="col-auto">
+			<img {% if fields.boeklink %} class="boek" style="max-width: 120px" {% endif %} src="
+			{% if fields.afbeelding %} 
+				{{ Image(fields.afbeelding).src }}
+			{% else %}
+				{{ Image(options.linkblok_afbeelding).src }}
+			{% endif %}
+			"> 
+		</div>
+		<div class="col">
+			{% if fields.boeklink %}
+				{% if fields.titel %}
+					<h5> {{ fields.titel }} </h5>
+				{% endif %}
+				{% if fields.tekst %}
+					{{ fields.tekst }}
+				{% endif %}
+				<a href="{{ fields.link.url }}" target="{{ fields.link.target }}">{{ fields.link.title }}</a>
+			{% else %}
+				{% if fields.link %}
+					{{ fields.tekst }}
+					<a href="{{ fields.link.url }}" target="{{ fields.link.target }}">{{ fields.link.title }}</a>
+				{% else %}
+					{{ fields.tekst }}
+				{% endif %}
+			{% endif %} 
+		</div>
+	</div>
+</div>
+
+<style type="text/css">
+  #block-{{ block.id }} {
+    
+  }
+</style>

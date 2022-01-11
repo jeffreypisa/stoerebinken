@@ -1,0 +1,31 @@
+.mod-breadcrumbs {
+	padding: 0 0 20px 0;
+	margin-top: -44px;
+	display: none; 
+	font-size: 16px;
+	ul {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+		li {
+			display: inline-block;
+			padding: 0 6px 0 0;
+			color: #fff;
+			background: none;
+			a {
+				color: #fff;
+				&:hover {
+					color: #fff;
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
+
+
+@include media-breakpoint-up(md) {
+	.mod-breadcrumbs {
+		display: block;
+	}
+}

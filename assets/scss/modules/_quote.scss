@@ -1,0 +1,55 @@
+.mod-quote {
+	&.bg-white {
+		.quote {
+			i {
+				color: $blue;
+			}
+			.lead {
+				&:after {
+					background: rgba(#000, 0.4);
+				}
+			}
+		}
+	}
+	.quote {
+	  position: relative;
+	  padding-left: 40px;
+	  .lead {
+		  position: relative;
+		  display: block;
+			&:after {
+			  position: absolute;
+			  top: 4px;
+			  left: -40px;
+			  bottom: 4px;
+			  width: 2px;
+			  content: '';
+			  background: rgba(#fff, 0.4);
+		  }
+	  }
+	  .h2 {
+		  position: absolute;
+		  top: 0;
+		  left: -18px;
+	  }
+  }
+  .klant {
+	  a {
+		  margin-right: 4px;
+	  }
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .mod-quote {
+
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .mod-quote {
+    .quote {
+
+    }
+  }
+}

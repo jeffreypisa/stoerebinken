@@ -1,0 +1,79 @@
+{% block html_head_container %}
+  {% include 'html-header.twig' %}
+	{% block head %}
+	{% endblock %}
+	</head>
+{% endblock %}
+	
+  <body class="{{ body_class }} {{ posttype_current }} {% if post.header_transparent or posttype_current == 'werk' or posttype_current == 'post' or fn('is_404') %} header-transparent {% endif %}" data-template="base.twig" style="background-color: {{ post.kleur_standaard_achtergrond }}">
+    {% include 'mobilemenu.twig' %}
+    <a id="mobilemenubtn" class="btn-menu close js-menu d-block d-md-none">
+      <div class="lines">
+    	  <span></span>
+        <span></span>
+      </div>
+    </a>
+    <div class="site-wrapper">
+    	{% set sectionno = '0' %}
+			<header class="header w-100 d-flex align-items-center {% if fn('is_front_page') %} nav-up2 {% endif %} {% if posttype_current == 'post' %} tekst-wit {% elseif post.tekstkleur %} tekst-{{ post.tekstkleur }} {% else %} tekst-wit {% endif %}">
+				{% block header %}
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-2 d-flex align-items-center">
+								<div class="logo" role="banner">
+									<a class="logo-link" href="{{ site.url }}" rel="home">
+										<div class="row">
+											<div class="col-md d-flex align-items-center">
+												{% if post.tekstkleur == 'zwart' %}
+											  	<img src="{{ options.logo_bk }}" alt="{{ site.title }} logo" class="d-none d-lg-block" width="25" height="25"> 
+											  	<img src="{{ options.logo_bk_md }}" alt="{{ site.title }} logo" class="d-none d-md-block d-lg-none" width="25" height="25"> 
+											  	<img src="{{ options.logo_bk_sm }}" alt="{{ site.title }} logo" class="d-md-none" width="25" height="25"> 
+											  {% elseif post.tekstkleur == 'wit' %}	
+											  	<img src="{{ options.logo_wt }}" alt="{{ site.title }} logo" class="d-none d-lg-block" width="25" height="25"> 
+											  	<img src="{{ options.logo_wt_md }}" alt="{{ site.title }} logo" class="d-none d-md-block d-lg-none" width="25" height="25"> 
+											  	<img src="{{ options.logo_wt_sm }}" alt="{{ site.title }} logo" class="d-md-none" width="25" height="25"> 
+											  {% else %}
+											  	<img src="{{ options.logo }}" alt="{{ site.title }} logo" class="d-none d-lg-block" width="25" height="25"> 
+											  	<img src="{{ options.logo_md }}" alt="{{ site.title }} logo" class="d-none d-md-block d-lg-none" width="25" height="25"> 
+											  	<img src="{{ options.logo_sm }}" alt="{{ site.title }} logo" class="d-md-none" width="25" height="25"> 
+											  {% endif %}
+										  </div>
+										</div>
+									</a>
+								</div>
+							</div>
+							<div class="col-8">
+								<div class="menu-middle d-none d-md-block">	
+							    <div id="nav-main" class="text-center">
+										{% include "menu.twig" with {'menu': menu.get_items} %}
+							    </div>
+								</div>
+							</div>
+							<div class="col-2 d-flex align-items-center flex-row-reverse">
+								<div class="links-topright">
+						    	<a id="mobilemenubtn" class="btn-menu js-menu d-md-none float-right">
+								    <div class="lines">
+								  		<span></span>
+							        <span></span>
+								    </div>
+							    </a>
+								</div>
+								{% include "menu-taal.twig" with {'taalmenu': taalmenu.get_items} %}
+							</div>
+						</div>
+					</div>
+	  		{% endblock %}
+				<div class="clearfix"></div>
+			</header>
+			<main id="content" role="main" class="content-wrapper {% if post.account %} mod-account d-flex align-items-center {% endif %}">
+				{% block content %}
+					Sorry, no content
+				{% endblock %}		
+	    </main>
+			{% block footer %}
+	      {% include 'footer.twig' %}
+	    {% endblock %}
+	  </div>
+	</body>
+  {{ function('wp_footer') }}
+</html>

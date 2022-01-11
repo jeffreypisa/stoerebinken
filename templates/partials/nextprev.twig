@@ -1,0 +1,97 @@
+<section class="bg-darkgrey">
+	<div class="container">
+		<div class="prevnext">
+			<a class="btn-werk noline" href="{% if lang == 'nl' %}{{ site.url }}/werk{% else %}{{ site.url }}werk{% endif %}"><i class="fas fa-th"></i> </a>
+			<div class="row">
+				<div class="col-md">
+					{% if post.prev %}
+						<a href="{{ post.prev.link }}" data-mh class="noline prev"> 
+							<div class="row">
+								<div class="col-auto d-flex align-items-center">
+									<i class="fas fa-chevron-left"></i>
+								</div>
+								<div class="col">
+			      			<h5 style="margin: 0"> {{ post.prev.title }} </h5>
+								</div>
+							</div>
+						</a>
+						<br>
+						<div class="clearfix"></div>
+						<a href="{{ post.prev.link }}" class="noline tease rectangle card h-auto">
+							<div class="img-container">
+								<div class="card-img-top" style="background-image: url({{ Image(post.prev.thumbnail).src|resize('768') }})">
+								</div>
+							</div>
+						</a>
+					{% else %}
+						{% set last = firstlast|last %}
+						{% if last %}
+							<a href="{{ last.link }}" data-mh class="noline prev"> 
+								<div class="row">
+									<div class="col-auto d-flex align-items-center">
+										<i class="fas fa-chevron-left"></i>
+									</div>
+									<div class="col">
+										<h5 style="margin: 0">{{ last.title }} </h5> 
+									</div>
+								</div>
+							</a>
+							<br>
+							<div class="clearfix"></div>
+							<a href="{{ last.link }}" class="noline tease rectangle card h-auto">
+								<div class="img-container">
+									<div class="card-img-top" style="background-image: url({{ Image(last.thumbnail).src|resize('768') }})">
+									</div>
+								</div>
+							</a>
+						{% endif %}
+					{% endif %}
+				</div>
+				<div class="col-md">
+					{% if post.next %}
+						<a href="{{ post.next.link }}" data-mh class="noline next text-right"> 
+							<div class="row">
+								<div class="col">
+									<h5 style="margin: 0">{{ post.next.title }} </h5> 
+								</div>
+								<div class="col-auto d-flex align-items-center">
+									<i class="fas fa-chevron-right"></i>
+								</div>
+							</div>
+						</a>
+						<br>
+						<div class="clearfix"></div>
+						<a href="{{ post.next.link }}" class="noline tease rectangle card h-auto">
+							<div class="img-container">
+								<div class="card-img-top" style="background-image: url({{ Image(post.next.thumbnail).src|resize('768') }})">
+								</div>
+							</div>
+						</a>
+					{% else %}
+						{% set first = firstlast|first %}
+						{% if first %}
+							<a href="{{ first.link }}" data-mh class="noline next text-right"> 
+								<div class="row">
+									<div class="col">
+										<h5 style="margin: 0">{{ first.title }} </h5> 
+									</div>
+									<div class="col-auto d-flex align-items-center">
+										<i class="fas fa-chevron-right"></i>
+									</div>
+								</div>
+							</a>
+							<br>
+							<div class="clearfix"></div>
+							<a href="{{ first.link }}" class="noline tease rectangle card h-auto">
+								<div class="img-container">
+									<div class="card-img-top" style="background-image: url({{ Image(first.thumbnail).src|resize('768') }})">
+									</div>
+								</div>
+							</a>
+						{% endif %}
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

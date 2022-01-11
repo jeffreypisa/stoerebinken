@@ -1,0 +1,115 @@
+.wp-block-image {
+  padding: 20px 0; }
+  .wp-block-image img {
+    width: 100%; }
+
+.block-cta {
+  padding: 60px 0 60px;
+  margin-bottom: 40px;
+  border: 0;
+  text-align: center; }
+  .block-cta .card {
+    background: #E4E9EB; }
+    .block-cta .card .card-body {
+      padding: 40px 30px; }
+
+.wp-block-table {
+  margin-bottom: 40px;
+  font-size: 16px;
+  line-height: 26px; }
+  .wp-block-table hr {
+    border-top-color: #000319; }
+  .wp-block-table tr:first-child {
+    background: #E4E9EB; }
+    .wp-block-table tr:first-child td {
+      font-weight: bold; }
+  .wp-block-table tr td {
+    border-bottom: 2px solid #E4E9EB;
+    padding: 8px 8px 6px; }
+
+.mod-accordion {
+  margin-bottom: 50px; }
+  .mod-accordion .item {
+    margin-bottom: 10px; }
+    .mod-accordion .item .heading {
+      position: relative;
+      cursor: pointer;
+      background: #E4E9EB;
+      display: block;
+      padding: 10px; }
+      .mod-accordion .item .heading h5 {
+        color: #000319;
+        transition: 0.15s ease-in;
+        margin: 0; }
+      .mod-accordion .item .heading i {
+        position: absolute;
+        top: 9px;
+        left: 22px;
+        font-size: 12px;
+        font-weight: 900;
+        color: #00ACFF; }
+      .mod-accordion .item .heading:hover h5 {
+        color: #00ACFF; }
+      .mod-accordion .item .heading:hover i {
+        color: #00ACFF;
+        transition: 0.15s ease-in; }
+      .mod-accordion .item .heading:hover:after {
+        display: none; }
+
+.gb-quote {
+  padding: 30px 0 60px; }
+  .gb-quote .quote {
+    position: relative;
+    padding-left: 40px; }
+    .gb-quote .quote i {
+      color: #00ACFF; }
+    .gb-quote .quote .lead {
+      position: relative;
+      display: block;
+      margin: 0; }
+      .gb-quote .quote .lead:after {
+        position: absolute;
+        top: 4px;
+        left: -40px;
+        bottom: 4px;
+        width: 2px;
+        content: '';
+        background: rgba(0, 0, 0, 0.4); }
+    .gb-quote .quote .h2 {
+      position: absolute;
+      top: 0;
+      left: -18px; }
+  .gb-quote .klant {
+    display: block;
+    margin-top: 20px; }
+    .gb-quote .klant a {
+      margin-right: 4px; }
+
+.mod-download {
+  margin-bottom: 50px; }
+  .mod-download .panel {
+    background: #DBE3F1;
+    box-shadow: 0 20px 40px 0 rgba(22, 49, 94, 0.3);
+    border-radius: 8px;
+    padding: 20px; }
+    .mod-download .panel img {
+      display: block;
+      width: 110px;
+      margin: 0 auto 20px; }
+  .mod-download h3 {
+    margin-bottom: 10px;
+    font-weight: 700; }
+
+.mod-lead {
+  margin-bottom: 0; }
+
+.gb-lead {
+  margin-bottom: 40px; }
+  .gb-lead p {
+    margin: 0 0 5px; }
+
+.gb-font {
+  margin-bottom: 30px; }
+  .gb-font img {
+    width: 100%;
+    margin-bottom: 20px; }

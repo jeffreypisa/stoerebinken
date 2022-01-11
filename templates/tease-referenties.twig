@@ -1,0 +1,19 @@
+<div class="tease card {% if loop.index is odd %} odd {% endif %}">
+	<div class="balloon text-center d-flex flex-column align-items-center" style="background: url({{ Image(item.thumbnail).src|resize(768) }}); background-size: cover; background-position: center center; padding-bottom: 57%; margin-bottom: 10px;" data-aos="fade-in" data-aos-duration="800">
+		<img class="corner" src="{{ theme.link }}/assets/images/balloon_corner.svg" alt="balloon_corner">
+		<div class="arrow"></div>
+	</div>
+	<h5 style="margin: 0; color: #00ACFF">{{ item.naam }}</h5>
+	<div> {{ item.functie }} </div>
+	<h3 style="margin-bottom: 20px"> {{ item.titel }} </h3>
+	{{ item.beschrijving }}
+	{% if item.knop %}
+		<div class="clearfix"></div>
+		<br>
+		<a class="btn-link" target="{{ item.knop.target }}" href="{{ item.knop.url }}">
+			{{ item.knop.title }} 
+		</a>
+  {% endif %}
+  <br>
+  <br>
+</div>

@@ -1,0 +1,59 @@
+.prevnext {
+	position: relative;
+	padding-top: 70px;
+	a {
+		display: block;
+		i {
+			line-height: 26px;
+		}
+		h5 {
+			transition: 0.2s ease-in-out;
+			white-space: nowrap;
+	    overflow: hidden;
+	    text-overflow: ellipsis;
+	    position: absolute;
+	    top: 0;
+		}
+		&.prev {
+			h5 {
+		    left: 0;
+		    right: 15px;
+			}
+		}
+		&.next {
+			h5 {
+		    right: 0;
+		    left: 15px;
+	    }
+		}
+		&:hover {
+			h5 {
+				color: $blue;
+			}
+		}
+	}
+	.btn-werk {
+		position: absolute;
+		top: 0px;
+		left: 50%;
+		margin-left: -10px;
+		font-size: 22px;
+		color: #fff;
+		z-index: 9;
+	}
+}
+
+@include media-breakpoint-up(md) {
+	.prevnext {
+		position: relative;
+		padding: 0;
+		a {
+			&.prev {
+				padding-right: 15px;
+			}
+			&.next {
+				padding-left: 15px;
+			}
+		}
+	}
+}

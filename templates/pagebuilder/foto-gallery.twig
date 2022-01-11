@@ -1,0 +1,29 @@
+<section class="section{{ sectionno }} mod-foto gallery d-flex align-items-center bg-{{ item.achtergrond }}">
+	<div class="container">
+		<div class="row">
+			{% for item in item.afbeeldingen %}
+				{% if item.groot %}
+					<div class="col-12">
+						{% if item.type == 'video' %}
+							<div class="video-container {% if item.schaduw %} with-shadow {% endif %}">
+								{{ item.video }}
+							</div>
+						{% else %}
+							<img class="{% if item.schaduw %} with-shadow {% endif %}" src="{{ Image(item.afbeelding).src|resize(1920) }}" srcset="{{ Image(item.afbeelding).srcset }}">
+						{% endif %}
+					</div>
+				{% else %}
+					<div class="col-md-6">
+						{% if item.type == 'video' %}
+							<div class="video-container {% if item.schaduw %} with-shadow {% endif %}">
+								{{ item.video }}
+							</div>
+						{% else %}
+							<img class="{% if item.schaduw %} with-shadow {% endif %}" src="{{ Image(item.afbeelding).src|resize(768) }}">
+						{% endif %}
+					</div>
+				{% endif %}
+			{% endfor %}
+		</div>
+	</div>
+</section>

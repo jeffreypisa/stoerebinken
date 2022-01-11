@@ -1,0 +1,18 @@
+.card.tease.square[href] {
+	height: calc( 100% - 30px );
+	border-radius: 4px;
+	&:hover {
+		box-shadow: 0 30px 60px 0 rgba(0,0,0,0.60);
+	}
+	h5 {
+		font-weight: 400;
+		margin: 10px 0 0;
+		padding-bottom: 6px;
+	}
+}
+
+@include media-breakpoint-up(md) {
+	.card.tease.square[href] {
+
+	}
+}

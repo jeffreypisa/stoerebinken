@@ -1,0 +1,10 @@
+{% if subfootermenu %}
+	<ul class="menuextra row">
+  	{% for item in subfootermenu %}
+  		<li class="{{item.classes | join(' ')}}">
+  			<a href="{{item.get_link}}">{{item.title}}</a>
+  			{% include "subfootermenu.twig" with {'subfootermenu': item.get_children} %}
+  		</li>
+  	{% endfor %}
+	</ul>
+{% endif %}

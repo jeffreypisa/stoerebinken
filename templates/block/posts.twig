@@ -1,0 +1,31 @@
+{#
+/**
+ * Block Name: Posts
+ *
+ * This is the template that displays the example block.
+ */
+#}
+
+<div id="block-{{ block.id }}" class="mod-posts">
+	<div class="row">
+		{% for item in fields.posts %}
+			<div class="col-md-6">	
+				<a href="{{ Post(item.ID).link }}" class="tease rectangle card">
+					<div class="img-container">
+						<div class="card-img-top" style="background-image: url({{ Post(item.ID).thumbnail.src|resize('768') }})">
+						</div>
+						<div class="titleblock">
+							<h5>{{ item.post_title }}<br> <i class="fas fa-arrow-right"></i></h5>
+						</div>
+					</div>
+				</a>
+			</div>
+		{% endfor %}
+	</div>
+</div>
+
+<style type="text/css">
+  #block-{{ block.id }} {
+    
+  }
+</style>

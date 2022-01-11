@@ -1,0 +1,19 @@
+<ul>
+	{% for hoofdmenu in options.hoofdmenu %}
+	  <li> 
+	    <a 
+	      {% if hoofdmenu.menu_type == 'paginalink' %} 
+	      		href="{{ hoofdmenu.pagina_link }}"
+	      {% else %}
+          target="#{{ hoofdmenu.naam|sanitize|lower }}" 
+	        class="js-opensubmenu"
+	        href="#"
+	      {% endif %}> 
+        {{ hoofdmenu.naam|lower }} 
+	      {% if hoofdmenu.menu_type != 'paginalink' %} 
+	        <i class="fal fa-chevron-down"></i>
+        {% endif %}
+      </a> 
+    </li>
+	{% endfor %}
+</ul>

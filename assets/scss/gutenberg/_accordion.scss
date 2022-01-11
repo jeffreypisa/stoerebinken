@@ -1,0 +1,38 @@
+.mod-accordion {
+	margin-bottom: 50px;
+	.item {
+		margin-bottom: 10px;
+		.heading {
+			position: relative;
+			cursor: pointer;
+	    background: #E4E9EB;
+	    display: block;
+	    padding: 10px;
+			h5 {
+				color: $darkblue;
+				transition: 0.15s ease-in;
+				margin: 0;
+			}
+			i {
+				position: absolute;
+		    top: 9px;
+		    left: 22px;
+		    font-size: 12px;
+		    font-weight: 900;
+		    color: $blue;
+			}
+			&:hover {
+				h5 {
+					color: $blue;
+				}
+				i {
+					color: $blue;
+					transition: 0.15s ease-in;
+				}
+				&:after {
+					display: none;
+				}
+			}
+		}
+	}
+}

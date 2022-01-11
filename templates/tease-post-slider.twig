@@ -1,0 +1,32 @@
+<div class="tease {% if loop.index is odd %} odd {% endif %}">
+	<div class="row align-items-center">
+		<div class="col-md-7">
+			<div class="rectangle card bg-dark">
+				<div class="img-container">
+					<div class="card-img-top" style="background-image: url({{ Image(item.afbeelding).src|resize('768') }})">
+					</div>
+				</div>
+				<div class="titleblock d-flex align-items-center">
+					<div class="w-100 text-center">
+						<h2>{{ item.titel }} </h2>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-5">
+			<div class="card summary bg-lightgrey">
+				<div class="card-body">
+					{% if item.tekst %}
+						{{ item.tekst }}
+					{% endif %}
+					<div class="clearfix"></div>
+					{% if item.link %}
+						<a class="btn-link" href="{{ item.link.url }}" style="margin-top: 8px">
+							{{ item.link.title }}
+						</a>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,32 @@
+<section class="section{{ sectionno }} mod-blog bg-{{ item.achtergrond }}">
+  <div class="container">
+  	{% include 'pagebuilder/parts/content.twig' %}
+  	<br>
+  </div>
+	{% if item.blog %}
+	<div class="js-slick-blog">
+    {% for item in item.blog %}
+    	<div class="item">
+	    	<div class="container">
+					<div class="row">
+						<div class="col-10 offset-1 col-md-12 offset-md-0">
+							<div class="item {% if loop.index is odd %} odd {% endif %}" data-aos="fade-up" data-aos-duration="800" data-aos-delay="{{delay}}">
+								{% include 'tease-post-slider.twig' %}
+							</div>
+							{% set delay = delay + 150 %}
+					  </div>
+					</div>
+				</div>
+    	</div>
+    {% endfor %}	
+	</div>
+	{% endif %}
+	{% if item.knop %}
+		<br>
+		<div class="text-center">
+			<a class="btn {% if item.achtergrond == 'color' or item.achtergrond == 'darkblue' %} btn-light {% else %} btn-primary {% endif %}" target="{{ item.knop.target }}" href="{{ item.knop.url }}">
+				{{ item.knop.title }} 
+			</a>
+		</div>
+  {% endif %}
+</section>

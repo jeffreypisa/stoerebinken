@@ -1,0 +1,63 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	{% include 'pagebuilder.twig' %}
+	<section class="section1 mod-content bg-darkgrey">
+  	<div class="container">
+			<div class="row">
+			  <div class="col-md-10 col-lg-8 ">
+			    <h1 class="h1xl">{{ options.blog_titel }}</h1>
+			  </div>
+			</div>
+			{% if options.blog_tekst %}
+			  <div class="row">
+			  	<div class="col-lg-2" data-aos="fade-right" data-aos-duration="800">
+			  		{% if options.blog_link %}
+			    		<a class="btn-link d-none d-lg-inline-block" target="{{ options.blog_link.target }}" href="{{ options.blog_link.url }}">
+								{{ options.blog_link.title }} 
+							</a>
+						{% endif %}
+			  	</div>
+					<div class="col-md-10 col-lg-8" data-aos="fade-in" data-aos-duration="800">
+			    	{{ options.blog_tekst }}
+					</div>
+				</div>
+			{% endif %}
+			{% if options.blog_link %}
+				<br>
+				<a class="btn-link d-lg-none" target="{{ options.blog_link.target }}" href="{{ options.blog_link.url }}">
+					{{ options.blog_link.title }} 
+				</a>
+			{% endif %}
+		</div>
+	</section>
+  <section class="bg-white">
+		<div class="container">
+      {% if categories %}
+				<div class="mod-categories d-none d-md-block">
+					<div class="row">
+						<div class="col-auto">
+							<a href="{{ posttype_link }}" class="noline {% if current_category == '' %} active {% endif %}"><h4>{{ options.alle }}</h4></a>
+						</div>
+						{% for item in categories %}
+							<div class="col-auto">
+								<a href="{{ item.link }}" class="noline {% if item.id == current_category %} active {% endif %}"><h4>{{ item.title }}</h4></a>
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+			{% endif %}
+      <div class="cards cards-archive">
+				<div class="row">
+					{% set delay = '0' %}
+					{% for item in posts %}  
+						<div class="col-sm-6 col-md-4" data-aos-duration="800" data-aos-delay="{{delay}}">
+							{% include 'tease.twig' %}
+						</div>
+						{% set delay = delay + '0' %}
+					{% endfor %}
+				</div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

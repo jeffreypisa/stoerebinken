@@ -1,0 +1,36 @@
+.gb-quote {
+	padding: 30px 0 60px;
+	.quote {
+	  position: relative;
+	  padding-left: 40px;
+	  i {
+		  color: $blue;
+	  }
+	  .lead {
+		  position: relative;
+		  display: block;
+		  margin: 0;
+			&:after {
+			  position: absolute;
+			  top: 4px;
+			  left: -40px;
+			  bottom: 4px;
+			  width: 2px;
+			  content: '';
+			  background: rgba(#000, 0.4);
+		  }
+	  }
+	  .h2 {
+		  position: absolute;
+		  top: 0;
+		  left: -18px;
+	  }
+  }
+  .klant {
+	  display: block;
+	  margin-top: 20px;
+	  a {
+		  margin-right: 4px;
+	  }
+  }
+}

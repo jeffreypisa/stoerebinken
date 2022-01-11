@@ -1,0 +1,50 @@
+<footer class="section footer d-flex align-items-center bg-darkgrey">
+  <div class="container"> 
+		<div class="row">
+  		<div class="col-md-6">
+  			{% if options.footer_over_title %}
+  				<h3> {{ options.footer_over_title }} </h3>
+  			{% endif %}
+  			{% if options.footer_over_content %}
+  				{{ options.footer_over_content }} 
+  			{% endif %}
+  		</div>
+  		<div class="col-md-3 col-xl-4">
+  			{% if options.footer_contact_title %}
+  				<h3> {{ options.footer_contact_title }} </h3>
+  			{% endif %}
+  			<div class="row">
+  				<div class="col-6 col-md-12 col-xl-6">
+			  		{% if options.footer_contact_office1 %}
+		  				{{ options.footer_contact_office1 }}
+		  			{% endif %}	  			
+  				</div>
+  				<div class="col-6 col-md-12 col-xl-6">
+		  			{% if options.footer_contact_office2 %}
+		  				{{ options.footer_contact_office2 }}
+		  			{% endif %}	
+  				</div>
+  			</div>
+  		</div>
+			<div class="col-md-3 col-xl-2">
+  			{% if options.footer_social_title %}
+  				<h3> {{ options.footer_social_title }} </h3>
+  			{% endif %}
+  			{% include 'partials/socialmedia.twig' %}
+  		</div>
+		</div>
+		<div class="subfooter">
+			<div class="row">
+				<div class="col-md">
+					{% include "footermenu.twig" with {'footermenu': footermenu.get_items} %}
+				</div>
+				<div class="col-md-auto">
+					{% set stars = options.footer_sterren %}
+					{{ options.footer_reviews }} Google reviews
+					<a href="https://www.google.nl/search?q=Stoere+Binken+Design" class="noline" target="_blank">
+					{% for i in range(1, stars) %}<i class="fas fa-star"></i>{% endfor %}</a> 
+				</div>
+			</div>
+		</div>
+  </div>
+</footer>

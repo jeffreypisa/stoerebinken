@@ -1,0 +1,13 @@
+{#
+/**
+ * Block Name: Font
+ *
+ * This is the template that displays the example block.
+ */
+#}
+
+<div id="block-{{ block.id }}" class="gb-font">
+	<h3> <span class="font_nr"> 1 </span> - {% if Post(fields.font.ID).thelink.url %} <a target="_blank" href="{{ Post(fields.font.ID).thelink.url }}"> {% endif %}{{ fields.font.post_title }} {% if Post(fields.font.ID).thelink.url %} </a> {% endif %} </h3>
+	<img src="{{ Post(fields.font.ID).thumbnail.src|resize('768') }}">
+	{{ fields.font.post_content }}
+</div>

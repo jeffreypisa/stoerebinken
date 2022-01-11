@@ -1,0 +1,22 @@
+{% if menu %}
+	<ul class="menu">
+		{% if posttype_current == 'post' %}
+			{% set currentpostname = 'blog' %}
+		{% endif %}
+  	{% for item in menu %}
+  		{% if item.title == 'Work' %}
+  			{% set menutitle = 'werk' %}
+  		{% else %}
+  			{% set menutitle = item.title|lower %}
+  		{% endif %}
+  		<li class="{{item.classes | join(' ')}} 
+  			{% if menutitle == currentpostname or 
+	  					menutitle == posttype_current %} 
+	  					current-menu-item 
+	  		{% endif %}">
+  			<a href="{{item.get_link}}" class="h4">{{item.title}}</a>
+  			{% include "menu.twig" with {'menu': item.get_children} %}
+  		</li>
+  	{% endfor %}
+	</ul>
+{% endif %}

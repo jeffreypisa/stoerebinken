@@ -1,0 +1,230 @@
+<div class="menu-mob">
+	<div id="mm-hoofdmenu" class="mm-page">
+		<ul>
+			<li><div class="container"><h5> Menu </h5></div> </li>
+			{% for item in options.hoofdmenu %}
+				{% if item.menu_type == 'paginalink' %}
+					<li>
+						<a href="{{ item.pagina_link }}"> 
+							<div class="container">
+						    	<div class="row">
+						    		<div class="col">
+						    			{{ item.naam }}
+						    		</div>
+						    	</div> 
+							</div>
+					  </a>
+					</li>
+				{% else %}
+					<li>
+						<a data-target="#mm-{{ item.naam|sanitize }}" class="js-openmenupage"> 
+							<div class="container">
+						    	<div class="row">
+						    		<div class="col">
+						    			<strong>{{ item.naam }}</strong>
+						    		</div>
+						    		<div class="col-auto">
+						    			<i class="fal fa-chevron-right"></i> 
+						    		</div>
+						    	</div> 
+							</div>
+					  </a>
+					</li>
+				{% endif %}
+			{% endfor %}
+			{% if options.kleurstelling == 'ouders' %}
+				<li class="bg-lightgrey"> 
+					<a href="{{ options.link_expertisecentrum.url }}" class="{% if options.kleurstelling == 'expertisecentrum' %} active {% endif %}"> 
+						<div class="container"> 
+							{{ options.link_expertisecentrum.title|capitalize }} 
+						</div> 
+					</a>
+				</li>				
+			{% else %}
+				<li class="bg-lightgrey"> 
+					<a href="{{ options.link_pios.url }}" class="{% if options.kleurstelling == 'ouders' %} active {% endif %}">
+						<div class="container"> {{ options.link_pios.title|capitalize }} </div> 
+					</a>
+				</li>
+			{% endif %}
+			{% if options.linkpiosapp %}
+				<li class="bg-lightgrey">
+					<a href="{{ options.linkpiosapp }}">
+						<div class="container"> Login </div>
+					</a>
+				</li>
+			{% endif %}
+			{% if options.tel %}
+				<li class="bg-lightgrey">
+					<a href="tel:{{ options.tel }}">
+						<div class="container"><i class="fal fa-phone"></i> {{ options.tel }} </div>
+					</a>
+				</li>
+			{% endif %}
+		</ul>
+	</div>
+	<div id="mm-begeleidingsvormen" class="mm-page hidemenu">
+		<ul>
+			<li><div class="container"><h5> Menu </h5></div> </li>
+			<li>
+		    <a class="js-backtomainmenu"> 
+			    	<div class="container">
+				    	<div class="row">
+				    		<div class="col-auto">
+				    			<i class="fal fa-chevron-left"></i> 
+				    		</div>
+				    		<div class="col">
+				    			<strong>Terug</strong>
+				    		</div>
+				    	</div> 
+			    	</div>
+		    </a>
+			</li>
+			{% for pagina in diensten %}
+				<li>
+			    <a href="{{ pagina.permalink }}"> 
+				    	<div class="container">
+					    	<div class="row">
+					    		<div class="col">
+					    			{{ pagina.title }}
+					    		</div>
+					    	</div> 
+				    	</div>
+			    </a>
+				</li>
+		  {% endfor %}
+		</ul>
+	</div>
+	<div id="mm-vestigingen" class="mm-page hidemenu">
+		<ul>
+			<li><div class="container"><h5> Menu </h5></div> </li>
+			<li>
+		    <a class="js-backtomainmenu"> 
+			    	<div class="container">
+				    	<div class="row">
+				    		<div class="col-auto">
+				    			<i class="fal fa-chevron-left"></i> 
+				    		</div>
+				    		<div class="col">
+				    			<strong>Terug</strong>
+				    		</div>
+				    	</div> 
+			    	</div>
+		    </a>
+			</li>
+			{% for pagina in vestigingen %}
+				<li>
+			    <a href="{{ pagina.permalink }}"> 
+			    	<div class="container">
+				    	<div class="row">
+				    		<div class="col">
+				    			{{ pagina.title }}
+				    		</div>
+				    	</div> 
+			    	</div>
+			    </a>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+	<div id="mm-diensten" class="mm-page hidemenu">
+		<ul>
+			<li><div class="container"><h5> Menu </h5></div> </li>
+			<li>
+		    <a class="js-backtomainmenu"> 
+			    	<div class="container">
+				    	<div class="row">
+				    		<div class="col-auto">
+				    			<i class="fal fa-chevron-left"></i> 
+				    		</div>
+				    		<div class="col">
+				    			<strong>Terug</strong>
+				    		</div>
+				    	</div> 
+			    	</div>
+		    </a>
+			</li>
+			{% for pagina in diensten %}
+				<li>
+			    <a href="{{ pagina.permalink }}"> 
+				    	<div class="container">
+					    	<div class="row">
+					    		<div class="col">
+					    			{{ pagina.title }}
+					    		</div>
+					    	</div> 
+				    	</div>
+			    </a>
+				</li>
+		  {% endfor %}
+		</ul>
+	</div>
+	<div id="mm-sectoren" class="mm-page hidemenu">
+		<ul>
+			<li><div class="container"><h5> Menu </h5></div> </li>
+			<li>
+		    <a class="js-backtomainmenu"> 
+			    	<div class="container">
+				    	<div class="row">
+				    		<div class="col-auto">
+				    			<i class="fal fa-chevron-left"></i> 
+				    		</div>
+				    		<div class="col">
+				    			<strong>Terug</strong>
+				    		</div>
+				    	</div> 
+			    	</div>
+		    </a>
+			</li>
+			{% for pagina in vestigingen %}
+				<li>
+			    <a href="{{ pagina.permalink }}"> 
+			    	<div class="container">
+				    	<div class="row">
+				    		<div class="col">
+				    			{{ pagina.title }}
+				    		</div>
+				    	</div> 
+			    	</div>
+			    </a>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+	{% for item in options.hoofdmenu %}
+		{% if item.menu_type == 'meerderepaginalinks' %}
+			<div id="mm-{{ item.naam|sanitize }}" class="mm-page hidemenu">
+				<ul>
+					<li><div class="container"><h5> Menu </h5></div> </li>
+					<li>
+				    <a class="js-backtomainmenu"> 
+					    	<div class="container">
+						    	<div class="row">
+						    		<div class="col-auto">
+						    			<i class="fal fa-chevron-left"></i> 
+						    		</div>
+						    		<div class="col">
+						    			<strong>Terug</strong>
+						    		</div>
+						    	</div> 
+					    	</div>
+				    </a>
+					</li>
+					{% for pagina in item.paginas %}
+						<li>
+					    <a href="{{ pagina.pagina_link }}"> 
+						    	<div class="container">
+							    	<div class="row">
+							    		<div class="col">
+							    			{{ pagina.naam }}
+							    		</div>
+							    	</div> 
+						    	</div>
+					    </a>
+						</li>
+				  {% endfor %}
+				</ul>
+			</div>
+		{% endif %}
+	{% endfor %}
+</div>

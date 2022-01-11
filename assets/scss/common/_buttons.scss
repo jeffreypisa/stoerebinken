@@ -1,0 +1,165 @@
+.btn, 
+body .nf-form-content button, 
+body .nf-form-content input[type=button], 
+body .nf-form-content input[type=submit] {
+  height: 40px;
+  line-height: 40px;
+  border-radius: 10px 0 10px 0;
+  padding: 0 22px;
+  font-weight: 600;
+  transition: 0.15s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: center 50px;
+  background-size: 20px;
+  border-width: 2px;
+	&:hover {
+    background: $dark;
+    color: #fff;
+	}
+  &:focus, &:active, &:target, &:not(:disabled):not(.disabled):active {
+		color: #fff;
+    opacity: 1;
+  }
+}
+.keyword-link {
+	color: $chalkgrey !important;
+	i {
+		color: $blue;
+	}
+	&:hover {
+		color: $blue !important;
+		&:after {
+			display: none;
+		}
+	}
+}
+
+.btn-link:not(.btn) {
+	display: inline-block;
+	font-size: 12px;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: $darkgrey;
+	margin-left: 15px;
+	position: relative;
+	&:before {
+		position: absolute;
+		top: 0;
+		left: -15px;
+		font-family: "Font Awesome 5 Free";
+	  font-weight: 400;
+	  content: "\f054";
+	  font-size: 10px;
+	  color: $blue;
+	}
+	&:hover {
+		border-color: $blue;
+		color: $blue;
+		text-decoration: none;
+	}
+}
+
+.btn-light:not(:disabled):not(.disabled) {
+  color: $blue;
+  background-color: #fff;
+  &:hover {
+    background-color: $blue;
+    opacity: 1;
+    border-color: #fff;
+    color: transparent;
+  }
+  &.active, &.active:hover {
+	  background-color: $blue;
+	  border-color: #fff;
+	  color: transparent;
+  }
+}
+
+
+.btn-primary, 
+body .nf-form-content button, 
+body .nf-form-content input[type=button], 
+body .nf-form-content input[type=submit] {
+  border: 0;
+  background-color: $blue;
+  border-color: $blue;
+  color: #fff;
+  &:hover {
+	  color: #fff;
+    background-color: lighten($blue, 10%);
+    border-color: lighten($blue, 10%);
+  }
+  &:focus, &:active, &:target, &:not(:disabled):not(.disabled):active {
+    color: #fff;
+    background-color: $blue;
+    border-color: $blue;
+  } 
+}
+
+.btn-outline-light, .footer .field-wrap input[type=button] {
+  border: 0;
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  line-height: 40px;
+  &:hover {
+	  background-color: transparent;
+	  color: transparent;
+	  border-color: #fff;
+  }
+  &:focus, &:active, &:target, &:not(:disabled):not(.disabled):active {
+
+  } 
+  &:before {
+		color: #fff;	
+	}
+}
+
+.btn-link-big {
+	position: relative;
+	display: inline-block;
+	&:after {
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    content: '';
+    height: 2px;
+    background: $blue;
+    width: 0%;
+    transition: 0.15s ease-in-out;
+  }
+  &:hover {
+    color: $blue;
+    text-decoration: none;
+    &:after {
+	    width: 100%;
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+	.btn, .field-wrap input[type=button] {
+		line-height: 42px;
+		height: 44px;
+		line-height: 44px;
+	}
+	.btn-link:not(.btn) {
+		font-size: 13px;
+	}
+}
+
+@include media-breakpoint-up(lg) {
+	.btn, .field-wrap input[type=button] {
+		height: 50px;
+		line-height: 50px;
+	}
+	.btn-link:not(.btn) {
+		font-size: 13px;
+		&:before {
+			top: -1px;
+		}
+	}
+}

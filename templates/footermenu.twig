@@ -1,0 +1,11 @@
+{% if footermenu %}
+	<ul class="footermenu list-unstyled">
+		<li> 1995-{{ "now"|date("Y") }} Stoere Binken Design </li>
+  	{% for item in footermenu %}
+  		<li class="{{item.classes | join(' ')}}">
+  			<a href="{{item.get_link}}" class="keyword-link h6"> <i class="fas fa-chevron-right"></i> {{item.title}}</a>
+  			{% include "footermenu.twig" with {'footermenu': item.get_children} %}
+  		</li>
+  	{% endfor %}
+	</ul>
+{% endif %}

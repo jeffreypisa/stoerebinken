@@ -1,0 +1,79 @@
+/*!
+Theme Name: Stoere Binken Design
+Theme URI: https://www.stoerebinken.nl
+Author: Emonks
+Author URI: https://www.stoerebinken.nl
+Description: Thema ontwikkeld door emonks.nl
+Version: 1.0
+Text Domain: myproject
+!*/
+
+@import 'common/variables';
+
+@import '../../node_modules/bootstrap/scss/bootstrap';
+@import '../../node_modules/slick-carousel/slick/slick.scss';
+@import '../../node_modules/slick-carousel/slick/slick-theme.scss';
+@import '../../node_modules/aos/src/sass/aos';
+
+@import '../fonts/fonts';
+@import '../fonts/brands';
+@import '../fonts/solid';
+@import '../fonts/light';
+@import '../fonts/fontawesome';
+
+@import 'gutenberg/base';
+@import 'gutenberg/cta';
+@import 'gutenberg/table';
+@import 'gutenberg/accordion';
+@import 'gutenberg/download';
+@import 'gutenberg/lead';
+@import 'gutenberg/quote';
+@import 'gutenberg/font';
+
+@import 'common/base';
+@import 'common/blog';
+@import 'common/carousel';
+@import 'common/balloon';
+@import 'common/table';
+@import 'common/prevnext';
+@import 'common/single';
+@import 'common/buttons'; 
+@import 'common/section';
+@import 'common/cards';
+@import 'common/tooltip';
+@import 'common/socialmedia';
+@import 'common/carousel';
+@import 'common/colors';
+@import 'common/modal';
+@import 'common/embed';
+@import 'common/form';
+@import 'common/preloader';
+@import 'common/progress';
+@import 'common/dropdownmenu';
+@import 'common/tease';
+@import 'common/tease-klanten';
+@import 'common/tease-post-square';
+@import 'common/tease-post-rectangle';
+
+@import 'modules/footer';
+@import 'modules/blog';
+@import 'modules/author';
+@import 'modules/content';
+@import 'modules/header';
+@import 'modules/pageheader';
+@import 'modules/mobilemenu';
+@import 'modules/slider';
+@import 'modules/categories';
+@import 'modules/foto';
+@import 'modules/filterblocks';
+@import 'modules/link';
+@import 'modules/quote';
+@import 'modules/mailchimp';
+@import 'modules/gbcontent';
+@import 'modules/calltoaction';
+@import 'modules/logoslider';
+@import 'modules/breadcrumbs';
+@import 'modules/biglink';
+
+@import 'plugins/slick';
+@import 'plugins/wpml';

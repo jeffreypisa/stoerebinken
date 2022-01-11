@@ -1,0 +1,97 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<style>
+		.bg-thema, header.is_stuck {
+			background-color: {{ post.kleur_main_light }} !important;
+		}
+		
+		.bg-standaard {
+			background-color: {{ post.kleur_standaard_achtergrond }} !important;
+			color: {{ post.kleur_standaard_tekst }} !important;
+		}
+		.bg-standaard	h1, .bg-standaard h2, .bg-standaard h3,
+		.bg-standaard	.h1, .bg-standaard .h2, .bg-standaard .h3, .bg-standaard .h1xl {
+			color: {{ post.kleur_standaard_titel }} !important;
+		}
+		.bg-standaard .btn-link:not(.btn):before  {
+			color: {{ post.kleur_standaard_tekst }} !important;
+		}
+		.bg-standaard a[href]:not(.btn) {
+			color: {{ post.kleur_standaard_link }} !important;
+		}
+		.bg-standaard a[href]:not(.btn):after,
+		.bg-standaard a[href]:not(.btn):hover:after,
+		.bg-standaard .quote .lead:after,
+		.bg-standaard .btn-link-big:after,
+		.bg-standaard .btn-link:after {
+			background: {{ post.kleur_standaard_link }} !important;
+		}
+		
+		.bg-light {
+			background-color: {{ post.kleur_licht_achtergrond }} !important;
+			color: {{ post.kleur_licht_tekst }} !important;
+		}
+		.bg-light	h1, .bg-light h2, .bg-light h3,
+		.bg-light	.h1, .bg-light .h2, .bg-light .h3, .bg-light .h1xl {
+			color: {{ post.kleur_licht_titel }} !important;
+		}
+		.bg-light .btn-link:not(.btn):before {
+			color: {{ post.kleur_licht_tekst }} !important;
+		}
+		.bg-light a[href]:not(.btn) {
+			color: {{ post.kleur_licht_link }} !important;
+		}
+		.bg-light a[href]:not(.btn):after, {
+			background: {{ post.kleur_licht_link }} !important;
+		}
+		.bg-light a[href]:not(.btn):after,
+		.bg-light a[href]:not(.btn):hover:after,
+		.bg-light .quote .lead:after,
+		.bg-light .btn-link-big:after,
+		.bg-light .btn-link:after { 
+			background: {{ post.kleur_licht_titel }} !important;
+		}
+		
+		.bg-dark {
+			background-color: {{ post.kleur_donker_achtergrond }} !important;
+			color: {{ post.kleur_donker_tekst }} !important;
+		}
+		.bg-dark h1, .bg-dark h2, .bg-dark h3,
+		.bg-dark .h1, .bg-dark .h2, .bg-dark .h3, .bg-dark .h1xl {
+			color: {{ post.kleur_donker_titel }} !important;
+		}
+		.bg-dark .btn-link:not(.btn):before {
+			color: {{ post.kleur_donker_tekst }} !important;
+		}
+		.bg-dark a[href]:not(.btn) {
+			color: {{ post.kleur_donker_link }} !important;
+		}
+		.bg-dark a[href]:not(.btn):after,
+		.bg-dark a[href]:not(.btn):hover:after,
+		.bg-dark .quote .lead:after,
+		.bg-dark .btn-link-big:after,
+		.bg-dark .btn-link:after {
+			background: {{ post.kleur_donker_link }} !important;
+		}	
+	</style>
+	<div class="content-wrapper">
+		{% set sectionno = sectionno + 1 %}
+		<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
+			<div class="article-body">
+				<section class="section{{ sectionno }} bg-standaard pb0">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-10 offset-md-1 text-center">
+								<h1> {{ post.title }} </h1>
+							  {{ post.content }}
+							</div>
+						</div>
+					</div>
+				</section>
+				{% include 'pagebuilder.twig' %}
+				{% include 'partials/nextprev.twig' %}
+			</div>
+		</article>
+	</div><!-- /content-wrapper -->
+{% endblock %}

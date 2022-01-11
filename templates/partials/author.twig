@@ -1,0 +1,13 @@
+<div class="mod-author" data-aos="fade-left" data-aos-duration="800">
+	<div class="row no-gutters">
+		<div class="col-auto">
+			<img src="{{ post.author.avatar }}">
+		</div>
+		<div class="col d-flex align-items-center">
+			<div class="d-flex flex-column"> 
+				<div>{{ post.author.functie }} </div>
+				<div><a class="d-inline-block float-left" href="{% if lang == 'nl' %}{{ post.author.auteurspagina.url }}{% else %}{{ site.url}}studio/{{ post.author.first_name|lower|replace({'é': "e"}) }}-{{ post.author.last_name|lower|raw }}/{% endif %}">{{ post.author.first_name }} {{ post.author.last_name }}</a></div>
+			</div>
+		</div>
+	</div>
+</div>

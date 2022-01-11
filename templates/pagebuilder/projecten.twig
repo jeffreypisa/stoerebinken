@@ -1,0 +1,27 @@
+<section class="section{{ sectionno }} bg-{{ item.achtergrond }}">
+  <div class="container">
+  	{% include 'pagebuilder/parts/content.twig' %}
+  	<br>
+  	{% if item.werk %}
+  		<div class="row">
+		    {% for item in item.werk %}
+		    	<div class="col-md-6">
+			      <div class="item">
+			      	{% include 'tease-post-rectangle.twig' %}
+			      </div>
+		    	</div>
+		    {% endfor %}	
+  		</div>	
+  	{% endif %}
+  	{% if item.knop %}
+  		<br>
+  		<br>
+  		<br>
+  		<div class="text-center">
+				<a class="btn-link" target="{{ item.knop.target }}" href="{{ item.knop.url }}">
+					{{ item.knop.title }} 
+				</a>
+  		</div>
+		{% endif %}
+  </div>
+</section>

@@ -1,0 +1,57 @@
+ .mod-calltoaction {
+  position: relative;
+	color: #fff;
+	h1, h2, h3, h4 {
+		color: #fff;
+	}
+  &:after, &:before {
+	  top: 0;
+	  position: absolute;
+	  pointer-events: none;
+	  content: '';
+	  width: 150px;
+	  height: 150px;
+	  background-repeat: no-repeat;
+	  background-position: left top;
+	  background-size: 100%;
+	  z-index: -1;
+	 
+  }
+  &:before {
+	  background-position: right top;
+	  transform: rotate(-90deg);
+	  right: 0;
+  }
+  &:after {
+	  background-position: right top;
+	  transform: rotate(180deg);
+	  left: 0;
+  }
+  .balloon {
+	  padding: 50px 30px;
+	  border-radius: 40px 0 40px 0;
+  }
+}
+
+
+@include media-breakpoint-up(md) {
+	.mod-calltoaction {
+  	position: relative;
+  	&:after, &:before {
+  		width: 300px;
+  		height: 300px;
+	  }
+	  .balloon {
+		  padding: 70px 50px;
+		  border-radius: 40px 0 40px 0;
+	  }
+	}
+}
+
+@include media-breakpoint-up(md) {
+	.mod-calltoaction {
+	  .balloon {
+		  padding: 100px 80px;
+	  }
+	}
+}

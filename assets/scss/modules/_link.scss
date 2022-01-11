@@ -1,0 +1,13 @@
+.mod-link {
+	margin-bottom: 30px;
+	h5 {
+		margin-bottom: 4px;
+	}
+	img {
+		width: 66px !important;
+		height: auto;
+		&.boek {
+			width: 120px !important;
+		}
+	}
+}

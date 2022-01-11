@@ -1,0 +1,10 @@
+<section class="section{{ sectionno }} mod-slider bg-{{ item.achtergrond }}"> 
+  <!-- Wrapper for slides -->
+  <div class="js-slick">
+    {% for image in item.afbeeldingen %}
+      <div class="item {% if loop.first %} active {% endif %}" style="background-image: url({{ Image(image).src|resize(1920) }})" srcset="{{ Image(image).srcset }}">
+				<div class="sizer"></div>
+      </div>
+    {% endfor %}
+  </div>
+</section>

@@ -1,0 +1,70 @@
+.mod-accordion {
+	border-radius: 8px;
+	overflow: hidden;
+	margin-bottom: 30px;
+	.item {
+		margin-top: -1px;
+		border-bottom: 1px solid rgba(#fff, 0.4);
+		background: $lightgrey;
+		&:first-child {
+			border-top: 1px solid rgba(#fff, 0.4);
+			border-radius: 8px 8px 0 0;
+			overflow:hidden;
+		}
+		&:last-child {
+			border-radius: 0 0 8px 8px;
+			overflow:hidden;
+		}
+		.antwoord{
+			padding: 20px 25px 10px;
+			background: #fff;
+			tr {
+				td {
+					padding: 6px 0;
+					border-bottom: 1px solid #d7d9dc;
+				}
+				&:first-child {
+					border-top: 1px solid #d7d9dc;
+				}
+			}
+		}
+		.heading {
+			text-align: left;
+			height: auto;
+			overflow: visible;
+			white-space: normal;
+			display: block;
+			cursor: pointer;
+			padding: 0 15px;
+			margin-bottom: 1px;
+			color: #fff;
+			h5 {
+				line-height: 20px;
+				padding: 15px 20px;
+				font-family: 'Open Sans';
+				font-weight: 600;
+				margin: 0 0 0 -10px;
+				color: #fff;
+				transition: 0.2s ease-in;
+			}
+			i {
+				transition: 0.2s ease-in;
+				line-height: 40px;
+				right: 20px;
+				left: auto;
+			}
+			&:hover {
+				box-shadow: none;
+				color: #fff;
+				i {
+					color: #fff;
+				}
+			}
+			&[aria-expanded="true"] {
+				i {
+					transform: rotate(180deg);
+				}
+			}
+		}
+	}
+}

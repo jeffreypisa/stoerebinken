@@ -1,0 +1,65 @@
+.bg-white {
+	background-color: white;
+}
+
+.bg-lightgrey {
+  background-color: $lightgrey;
+  .btn-light:not(:disabled):not(.disabled) {
+	  background-color:#fff;
+	  border-color: #fff;
+	  &:hover {
+		  background-color: $grey;
+			border-color: $grey;
+	  }
+  }
+}
+
+.bg-grey {
+  background-color: $grey;
+}
+
+.bg-darkgrey {
+	background-color: $darkgrey;
+}
+
+.bg-dark {
+	background-color: $chalkgrey !important;
+}
+
+.bg-blue {
+	background-color: $blue;
+}
+
+.bg-blue-accent {
+	background-color: $blueaccent;
+}
+
+.bg-green-accent {
+	background-color: $greenaccent;
+}
+
+.bg-blue, .text-white, .bg-grey, .bg-darkgrey, .bg-dark {
+  color: #fff;
+  p, h1,h2,h3,h4,h5,
+  .h1,.h2,.h3,.h4,.h5 {
+  	color: #fff;
+  }
+  .h1xl {
+	  color: $blue;
+  }
+  .btn-link:not(.btn) { 
+		color: #fff;
+		&:hover {
+			color: $blue;
+		}
+	}
+}
+
+.bg-blue {
+	a:not(.btn) { 
+		color: $darkgrey;
+		&:not(.noline):after {
+			background: $darkgrey;
+		}
+	}
+}

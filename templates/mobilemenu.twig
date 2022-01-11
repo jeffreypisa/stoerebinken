@@ -1,0 +1,28 @@
+<div class="mod-mobilemenu">
+	<div class="menucontent d-flex align-items-center">
+    <div class="container-fluid">
+      {% include "menu.twig" with {'menu': menu.get_items} %}
+      {% include "menu-taal.twig" with {'taalmenu': taalmenu.get_items} %}
+      {% if options.telefoon or options.whatsapp %}
+      	<div class="icons">
+					<div class="row h-100 no-gutters">
+						{% if options.telefoon %}
+							<div class="col-auto">
+						  	<a href="tel:{{ options.telefoon }}" target="_blank" class="h4 text-center"> 
+						  		<img src="{{ Image(options.telefoon_icoon).src }}">
+						  	</a>
+						  </div>
+						{% endif %}
+					  {% if options.whatsapp %}
+					  	<div class="col-auto">
+					  		<a href="https://wa.me/{{ options.whatsapp }}" target="_blank" class="h4 text-center"> 
+					  			<img src="{{ Image(options.whatsapp_icoon).src }}"> 
+					  		</a>
+					  	</div>
+					  {% endif %}
+					</div>
+				</div>
+			{% endif %}
+    </div>
+	</div>
+</div>

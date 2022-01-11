@@ -1,0 +1,36 @@
+<section class="section{{ sectionno }} mod-foto full d-flex align-items-center" >
+	<div class="row no-gutters w-100">
+		<div class="col-md-7 col-lg-7 bg-cover order-first {% if item.toon_afbeelding == 'links' %} order-md-first {% else %} order-md-last {% endif %}" style="background-image: url({{ Image(item.afbeelding).src }})">
+		</div>
+  	<div class="col-md-5 col-lg-5 d-flex align-items-center bg-{{ item.achtergrond|resize(1024) }} {% if item.toon_afbeelding == 'links' %} order-md-last {% else %} order-md-first {% endif %}">
+			<div class="card-body">
+				{% if item.titel %}
+		    	<h3> {{ item.titel }} </h3>
+		    {% endif %}
+		  	{% if item.tekst %}
+		    	{{ item.tekst }}
+		    {% endif %}
+		    {% if item.lijst %}
+		    	<div class="list-icons">
+			    	{% for item in item.lijst %}
+			    		<div class="row">
+			    			<div class="col-auto" style="width: 36px">
+			    				{{ item.icoon }}
+			    			</div>
+			    			<div class="col">
+									{{ item.tekst }}
+			    			</div>
+			    		</div>
+				    {% endfor %}
+		    	</div>
+		    {% endif %}
+				{% if item.knop %}
+					<br>
+					<a class="btn {% if item.achtergrond == 'color' or item.achtergrond == 'darkblue' %}btn-outline-light {% else %} btn-primary {% endif %}" target="{{ item.knop.target }}" href="{{ item.knop.url }}">
+						{{ item.knop.title }} 
+					</a>
+		    {% endif %}
+			</div>
+		</div>
+	</div> 
+</section>

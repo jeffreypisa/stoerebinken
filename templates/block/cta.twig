@@ -1,0 +1,27 @@
+{#
+/**
+ * Block Name: CTA block
+ *
+ * This is the template that displays the example block.
+ */
+#}
+
+<div id="block-{{ block.id }}" class="block block-cta">
+	<div class="card">
+		<div class="card-body">
+			<h4>{{ fields.titel }}</h4>
+		  <p>{{ fields.content }}</p>
+		  {% if fields.knop %} 
+				<a class="btn btn-primary" target="{{ fields.knop.target }}" href="{{ fields.knop.url }}"> 
+					{{ fields.knop.title }} 
+				</a>
+			{% endif %}
+		</div>
+	</div>
+</div>
+
+<style type="text/css">
+    #block-{{ block.id }} {
+	    
+    }
+</style>

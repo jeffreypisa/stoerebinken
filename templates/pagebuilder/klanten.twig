@@ -1,0 +1,29 @@
+<section class="section{{ sectionno }} mod-klanten bg-{{ item.achtergrond }}">
+  <div class="container">
+  	{% if item.weergave == 'alle' %}
+	  	{% if klanten %}
+	  		<div class="row">
+			    {% for item in klanten %}
+			    	<div class="col-6 col-md-4 col-xl-3">
+				      <div class="item0">
+				      	{% include 'tease-klanten.twig' %}
+				      </div>
+			    	</div>
+			      {% set delay = delay + 0 %}
+			    {% endfor %}	
+	  		</div>	
+	  	{% endif %}
+	  {% else %}
+	  	<div class="row">
+		    {% for item in item.klanten %}
+		    	<div class="col-6 col-md-4 col-xl-3">
+			      <div class="item0">
+			      	{% include 'tease-klanten.twig' %}
+			      </div>
+		    	</div>
+		      {% set delay = delay + 0 %}
+		    {% endfor %}	
+  		</div>	
+	  {% endif %}
+  </div>
+</section>

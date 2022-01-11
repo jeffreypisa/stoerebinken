@@ -1,0 +1,20 @@
+<section class="section{{ sectionno }} mod-pageheader {% if item.minder_hoog %} {% else %} big {% endif %} bg-darkgrey {% if item.text_white %} text-white {% endif %}">
+	<div class="bg" style="background-image: url({{ item.afbeelding|resize(1920) }});">
+	</div>
+	<div class="content w-100 h-100 d-flex align-items-center">
+  	<div class="container">
+    	<div class="row">
+    		<div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+		    	<h2 id="texteffect" class="h1 text-center"> {{ item.titel }} </h2>
+		      {% if item.button %}
+		      	<div class="text-center">
+							<a class="btn btn-primary" href="{{ item.button.url }}">
+								{{ item.button.title }} 
+							</a>
+		      	</div>
+			    {% endif %}
+    		</div>
+    	</div>
+		</div>
+  </div>
+</section>

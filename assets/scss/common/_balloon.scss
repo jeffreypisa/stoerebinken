@@ -1,0 +1,38 @@
+.balloon {
+  padding: 50px 30px;
+  border-radius: 40px 0 40px 0;
+  position: relative;
+  &:after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: calc(50% - 30px);
+		height: 30px;
+		background: #fff;
+	}
+	&:before {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		width: calc(50% - 30px);
+		height: 30px;
+		background: #fff;
+	}
+	.corner {
+		position:absolute;
+		bottom: 30px;
+		right: 0;
+	}
+	.arrow {
+		position: absolute;
+		bottom: 0;
+		left: calc(50% - 30px);
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 0 0 30px 60px;
+		border-color: transparent transparent #ffffff transparent;
+	}
+}
