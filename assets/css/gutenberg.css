@@ -39,7 +39,7 @@
       padding: 10px; }
       .mod-accordion .item .heading h5 {
         color: #000319;
-        transition: 0.15s ease-in;
+        transition: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
         margin: 0; }
       .mod-accordion .item .heading i {
         position: absolute;
@@ -52,7 +52,7 @@
         color: #00ACFF; }
       .mod-accordion .item .heading:hover i {
         color: #00ACFF;
-        transition: 0.15s ease-in; }
+        transition: 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
       .mod-accordion .item .heading:hover:after {
         display: none; }
 

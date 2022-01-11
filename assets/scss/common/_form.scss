@@ -56,7 +56,7 @@
 	    border-radius: 6px;
 	    font-size: 16px;
 	    color: $darkblue;
-	    transition: 0.2s ease-in-out;
+	    transition: 0.3s $ease;
 		}
 	  .label-above .nf-field-element, .label-below .nf-field-element {
 	    font-family: inherit;
@@ -105,7 +105,7 @@
 	    border-radius: 6px;
 	    font-size: 16px;
 	    color: $darkblue;
-	    transition: 0.2s ease-in-out;
+	    transition: 0.3s $ease;
 	    &:focus {
 	      border-color: $blue;
 	      background: $lightgrey;

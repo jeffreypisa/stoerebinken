@@ -1,1 +1,0 @@
-import $ from"jquery";export function font(){var t=0;$(".gb-font").each(function(){$(this).find(".font_nr").attr("class",t),t+=1})}

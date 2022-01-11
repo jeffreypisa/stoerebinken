@@ -26,22 +26,20 @@ header {
 	background: #fff;
 	background: $darkgrey;
 	transform: translateY(0%);
-	transition: 0.4s ease-in;
+	transition: 1s $ease;
 	position: absolute;
 	top: 0;
 	left: 0;
 	right: 0;
 	height: 80px;
 	padding: 10px 0;
-	&.nav-up, &.nav-up2 {
+	&.nav-up {
 		transform: translateY(-100%);
-		transition: 0.2s ease-in;
 	}
 	&.nav-down {
 		z-index: 99;
 		transform: translateY(0%);
 		box-shadow: 0px 2px 4px rgba(0,0,0,.07);
-		transition: 0.2s ease-in;
 	}
 	&.tekst-zwart {
 		ul li {
@@ -103,7 +101,7 @@ header {
       a:not(.btn) {
 	      line-height: 70px;
 	      color: #fff;
-	      transition: 0.15s ease-in-out;
+	      transition: 0.6s $ease;
 			  &:hover, &:active, &:focus {
 				  color: $blue;
 				  text-decoration: none; 
@@ -122,7 +120,7 @@ header {
 	      	height: 2px;
 	      	content: " ";
 	      	position: absolute;
-	      	transition: 0.2s ease-in;
+	      	transition: 0.3s $ease;
 	    	}
       }
       &.current-menu-item a:not(.btn), &.current-menu-item a:not(.btn):hover,
@@ -137,7 +135,7 @@ header {
 	      	height: 4px;
 	      	content: " ";
 	      	position: absolute;
-	      	transition: 0.2s ease-in;
+	      	transition: 0.3s $ease;
 	      	display: block;
 	    	}
 	    	li a {
@@ -262,14 +260,14 @@ header {
 	  transition: opacity;
 	  z-index: -1;
 	  opacity: 0;
-	  transition: 0.2s ease-in;
+	  transition: 0.5s $ease;
   }
   .lines {
     margin: 0;
     width: 20px;
     height: 22px;
     transform: rotate(0);
-    transition: 0.3s ease-in-out;
+    transition: 0.5s $ease;
     position: relative;
     span {
       display: block;
@@ -281,7 +279,7 @@ header {
       border-radius: 20px;
       left: 0;
       transform: rotate(0deg);
-      transition: .25s ease-in-out;
+      transition: .5s $ease;
       transform-origin: left center;
     }
     span:nth-child(1) {
@@ -325,7 +323,7 @@ body.opensidemenu {
 			transform: translateY(-1px);
 		}
 		ul.menu {
-		  margin: 0;
+		  margin: 5px 0 0;
 		  list-style-type: none;
 		  > li a {
 				height: 60px;
@@ -422,11 +420,11 @@ body.opensidemenu {
 			      display: block;
 			      pointer-events: all;
 			      opacity: 1;
-			      transform: translateY(-62px);
+			      transform: translateY(-66px);
 			      height: auto;
 			      border-radius: 15px 0;
 			      visibility: visible;
-			      transition: height 0.2s ease-in, opacity 0.2s ease-in, transform 0.2s ease-in, visibility 0.2s ease-in;
+			      transition: height 1s $ease, opacity 0.3s $ease, transform 1s $ease, visibility 0.3s $ease;
 			      li {
 				      a:hover {
 					      color: $blue;

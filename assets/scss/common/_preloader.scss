@@ -13,7 +13,7 @@ body.preloader-site {
     left: 0;
     z-index: 9999999;
     opacity: 1;
-    transition: 1s ease-in-out;
+    transition: 2s $ease;
 }
 
 .preloader-wrapper .preloader {

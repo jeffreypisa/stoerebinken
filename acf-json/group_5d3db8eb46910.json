@@ -279,6 +279,13 @@
                 "operator": "==",
                 "value": "werk"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "pro_fonts"
+            }
         ]
     ],
     "menu_order": 0,
@@ -289,7 +296,7 @@
     "hide_on_screen": [
         "the_content"
     ],
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1564735222
+    "modified": 1641908557
 }

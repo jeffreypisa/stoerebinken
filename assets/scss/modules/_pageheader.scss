@@ -1,12 +1,16 @@
 .start .mod-pageheader {
 	opacity: 1;
+	.bg {
+		opacity: 0.6;
+		transform: scale(1);
+	}
 	.h1 {
 		opacity: 1;
 		> span span {
-			-webkit-transition: -webkit-transform 0.6s cubic-bezier(0.4, 0, 0.1, 1) 0.75s;
-			transition: -webkit-transform 0.6s cubic-bezier(0.4, 0, 0.1, 1) 0.75s;
-			transition: transform 0.6s cubic-bezier(0.4, 0, 0.1, 1) 0.75s;
-			transition: transform 0.6s cubic-bezier(0.4, 0, 0.1, 1) 0.75s, -webkit-transform 0.6s cubic-bezier(0.4, 0, 0.1, 1) 0.75s;
+			-webkit-transition: -webkit-transform 0.6s $ease 0.75s;
+			transition: -webkit-transform 0.6s $ease 0.75s;
+			transition: transform 0.6s $ease 0.75s;
+			transition: transform 0.6s $ease 0.75s, -webkit-transform 0.6s $ease 0.75s;
 			-webkit-transform: translate3d(0, 0, 0);
 			transform: translate3d(0, 0, 0);
 		}
@@ -53,7 +57,7 @@
 	}
 }
 
-section.mod-pageheader {
+.mod-pageheader {
   opacity: 1;
   overflow: visible;
   padding: 50px 0 30px;
@@ -83,11 +87,13 @@ section.mod-pageheader {
     left: 0;
     right: 0;
     bottom: 0;
-    opacity: 0.5;
+    opacity: 0.6;
+	transform: scale(1.4);
 	  background-size: cover;
 	  background-position: center center;
 	  z-index: -4;
 	  pointer-events: none;
+	  transition: transform 10s $ease;
 	  &.overlay:before {
 		  background: $darkblue !important;
 		  content: '';
@@ -97,7 +103,7 @@ section.mod-pageheader {
 		  right: 0;
 		  bottom: 0;
 		  z-index: 0;
-		  opacity: 0.4;
+		  opacity: 0.3;
 	  }
   }
   .content {
@@ -111,19 +117,19 @@ section.mod-pageheader {
 }
 
 @include media-breakpoint-up(sm) {
-	section.mod-pageheader {
+	.mod-pageheader {
 
 	}
 }
 
 @include media-breakpoint-up(md) {
-  section.mod-pageheader.big {
+  .mod-pageheader.big {
 		height: 640px;
   }
 }
 
 @include media-breakpoint-up(lg) {
-  section.mod-pageheader.big {
+  .mod-pageheader.big {
     height: calc(100vh - 180px);
     min-height: 780px;
     max-height: 900px;    

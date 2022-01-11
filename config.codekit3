@@ -9,6 +9,14 @@
   ],
   "creatorBuild" : "34335",
   "files" : {
+    "\/.nova\/Publishing\/Stoere Binken Design.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/.nova\/Publishing\/Stoere Binken Design-min.json",
+      "oF" : 0,
+      "oO" : 0,
+      "oS" : 1
+    },
     "\/404.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -348,30 +356,6 @@
       "pg" : 0,
       "sct" : 1
     },
-    "\/assets\/fonts\/brands-min.css" : {
-      "aP" : 1,
-      "bl" : 0,
-      "ci" : 0,
-      "co" : 0,
-      "ft" : 16,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/assets\/fonts\/brands-min-min.css",
-      "oF" : 0,
-      "pg" : 0
-    },
-    "\/assets\/fonts\/brands.css" : {
-      "aP" : 1,
-      "bl" : 0,
-      "ci" : 0,
-      "co" : 0,
-      "ft" : 16,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/assets\/fonts\/brands-min.css",
-      "oF" : 0,
-      "pg" : 0
-    },
     "\/assets\/fonts\/fa-brands-400.eot" : {
       "cB" : 0,
       "ft" : 8192,
@@ -498,42 +482,6 @@
       "oAP" : "\/assets\/fonts\/fa-solid-900.woff2",
       "oF" : 0
     },
-    "\/assets\/fonts\/fontawesome.css" : {
-      "aP" : 1,
-      "bl" : 0,
-      "ci" : 0,
-      "co" : 0,
-      "ft" : 16,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/assets\/fonts\/fontawesome-min.css",
-      "oF" : 0,
-      "pg" : 0
-    },
-    "\/assets\/fonts\/light.css" : {
-      "aP" : 1,
-      "bl" : 0,
-      "ci" : 0,
-      "co" : 0,
-      "ft" : 16,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/assets\/fonts\/light-min.css",
-      "oF" : 0,
-      "pg" : 0
-    },
-    "\/assets\/fonts\/regular.css" : {
-      "aP" : 1,
-      "bl" : 0,
-      "ci" : 0,
-      "co" : 0,
-      "ft" : 16,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/assets\/fonts\/regular-min.css",
-      "oF" : 0,
-      "pg" : 0
-    },
     "\/assets\/fonts\/Roboto-Bold.woff" : {
       "cB" : 0,
       "ft" : 8192,
@@ -565,18 +513,6 @@
       "oA" : 0,
       "oAP" : "\/assets\/fonts\/Roboto-Regular.woff2",
       "oF" : 0
-    },
-    "\/assets\/fonts\/solid.css" : {
-      "aP" : 1,
-      "bl" : 0,
-      "ci" : 0,
-      "co" : 0,
-      "ft" : 16,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/assets\/fonts\/solid-min.css",
-      "oF" : 0,
-      "pg" : 0
     },
     "\/assets\/fonts\/TitilliumWeb-Black.woff" : {
       "cB" : 0,
@@ -751,17 +687,6 @@
       "sC" : 3,
       "tS" : 0
     },
-    "\/assets\/js\/scripts\/font-min.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/assets\/js\/scripts\/font-min-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
     "\/assets\/js\/scripts\/font.js" : {
       "bF" : 0,
       "ft" : 64,
@@ -846,17 +771,6 @@
       "mi" : 1,
       "oA" : 1,
       "oAP" : "\/assets\/js\/scripts\/site_is_loaded-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/assets\/js\/scripts\/slick-min.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/assets\/js\/scripts\/slick-min-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -2290,6 +2204,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/templates\/404.twig",
+      "oF" : 0
+    },
+    "\/templates\/archive-pro_fonts.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/templates\/archive-pro_fonts.twig",
       "oF" : 0
     },
     "\/templates\/archive-werk.twig" : {
@@ -4105,7 +4027,7 @@
       }
     },
     "esLintSourceType" : 0,
-    "externalServerAddress" : "http:\/\/transfreight.tst:8888",
+    "externalServerAddress" : "https:\/\/stoerebinken.tst:8890",
     "gitIgnoreBuildFolder" : 1,
     "hideConfigFile" : 0,
     "jsCheckerReservedNamesString" : "",

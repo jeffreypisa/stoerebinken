@@ -1,1 +1,0 @@
-import $ from"jquery";import"slick-carousel";export function slick_init(){$(".js-slick").slick({centerMode:!0,centerPadding:"30px",slidesToShow:1,responsive:[{breakpoint:768,settings:{arrows:!1,centerMode:!0,centerPadding:"40px",slidesToShow:1}},{breakpoint:480,settings:{arrows:!1,centerMode:!0,centerPadding:"40px",slidesToShow:1}}]})}

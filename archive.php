@@ -13,7 +13,7 @@
  * @subpackage  Timber
  * @since   Timber 0.2
  */
-     
+	 
 $templates = array( 'archive-' . $post->post_type . '.twig', 'archive.twig', 'index.twig' );
 
 $context = Timber::get_context();
@@ -25,9 +25,9 @@ $context['posttype_current'] = $currentPostType;
 
 $categories = get_the_category();
 
-
 $category_id = $wp_query->get_queried_object_id();
 $context['current_category'] = $category_id;
+$context['title'] = single_tag_title( '', false );
 
 /* Load categories */
 if ($currentPostType == 'werk') {
@@ -37,6 +37,13 @@ if ($currentPostType == 'werk') {
 	$context['child_categories'] = $terms_childs;
 	$thecat = 'werk-categorie';
 	$context['posttype_link'] = get_post_type_archive_link( 'werk' );
+} elseif ($currentPostType == 'pro_fonts') {
+	$terms = \Timber::get_terms(array('taxonomy' => 'fonts-categorie', 'parent' => 0, 'orderby' => 'slug', 'hide_empty' => true)); 
+	$terms_childs = \Timber::get_terms(array('taxonomy' => 'fonts-categorie', 'orderby' => 'slug', 'hide_empty' => true)); 
+	$context['categories'] = $terms;
+	$context['child_categories'] = $terms_childs;
+	$thecat = 'fonts-categorie';
+	$context['posttype_link'] = get_post_type_archive_link( 'pro_fonts' );
 } else {
 	$terms = \Timber::get_terms(array('taxonomy' => 'category', 'hide_empty' => true)); 
 	$context['categories'] = $terms;
@@ -54,16 +61,14 @@ if(empty($category_id)) {
 	  'post_type'			  => $currentPostType,
 		'posts_per_page'  => -1,
 		'tax_query' => array(
-	    array(
-	        'taxonomy' => $thecat,
-	        'field' => 'term_id',
-	        'terms' => $category_id,
-	    ),
+		array(
+			'taxonomy' => $thecat,
+			'field' => 'term_id',
+			'terms' => $category_id,
+		),
 	  ),
 	);
 }
-
-
 
 $context['posts'] = Timber::get_posts($args);
 

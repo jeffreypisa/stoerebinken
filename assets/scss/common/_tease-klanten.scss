@@ -5,11 +5,11 @@
 		width: 80%;
 		-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
 		filter: grayscale(100%);
-		transition: 0.2s ease-in-out;
+		transition: 1s $ease;
 	}
 	i {
 		transform: translateX(0);
-		transition: 0.2s ease-in-out;
+		transition: 1s $ease;
 	}
 	&:hover {
 		img {

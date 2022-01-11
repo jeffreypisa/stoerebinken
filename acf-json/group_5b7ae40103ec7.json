@@ -290,7 +290,7 @@
         },
         {
             "key": "field_5d30c119bd47b",
-            "label": "Contact titel",
+            "label": "Contact titel 1",
             "name": "footer_contact_title",
             "type": "text",
             "instructions": "",
@@ -325,6 +325,25 @@
             "toolbar": "full",
             "media_upload": 1,
             "delay": 0
+        },
+        {
+            "key": "field_61dda95110436",
+            "label": "Contact titel 2",
+            "name": "footer_contact_title2",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         },
         {
             "key": "field_5d30c143bd47d",
@@ -718,6 +737,75 @@
             "maxlength": ""
         },
         {
+            "key": "field_61dd882575e74",
+            "label": "Archief | Fonts",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_61dd882f75e75",
+            "label": "Titel",
+            "name": "fonts_titel",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_61dd883f75e76",
+            "label": "Tekst",
+            "name": "fonts_tekst",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_61dd884e75e77",
+            "label": "Link",
+            "name": "fonts_link",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
             "key": "field_5d3dc21cfbd59",
             "label": "Archief | Werk",
             "name": "",
@@ -965,7 +1053,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1570967382
+    "modified": 1641916815
 }

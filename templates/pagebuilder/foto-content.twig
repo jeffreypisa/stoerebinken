@@ -3,7 +3,7 @@
 		<div class="col-md-7 col-lg-7 bg-cover order-first {% if item.toon_afbeelding == 'links' %} order-md-first {% else %} order-md-last {% endif %}" style="background-image: url({{ Image(item.afbeelding).src }})">
 		</div>
   	<div class="col-md-5 col-lg-5 d-flex align-items-center bg-{{ item.achtergrond|resize(1024) }} {% if item.toon_afbeelding == 'links' %} order-md-last {% else %} order-md-first {% endif %}">
-			<div class="card-body">
+			<div class="card-body" data-aos="fade-in">
 				{% if item.titel %}
 		    	<h3> {{ item.titel }} </h3>
 		    {% endif %}

@@ -1,9 +1,9 @@
 .mod-filterblocks {
-  position: relative;
-  background: #fff;
-  padding: 30px 0 0;
-  z-index: 4 !important;
-  overflow: visible;
+	position: relative;
+	background: #fff;
+	padding: 30px 0 0;
+	z-index: 4 !important;
+	overflow: visible;
 	.container {
 		position: relative
 	}
@@ -12,7 +12,7 @@
 		padding: 30px;
 		> .row > div:first-child {
 			a:not(.btn) h3 {
-				transition: 0.15s ease-in-out;
+				transition: 0.5s $ease;
 			}
 			a:not(.btn):hover h3 {
 				color: $blue;
@@ -50,20 +50,26 @@
 }
 @include media-breakpoint-up(md) {
 	.mod-filterblocks {
-    height: 80px;
+    	height: auto;
+		.btn-tag {
+			margin-bottom: 30px;
+		}
 		.menubar{
-			position: absolute;
+			position: relative;
 			z-index: 99;
-			left: 0;
+			left: 0px;
+			right: 0px;
 			z-index: 3;
 			top: 0;
 			margin: 0;
+			padding: 30px 0 50px 0;
 			.topcats {
+				position: absolute;
 				padding: 20px 40px;
-		    margin-top: -20px;
-		    margin-left: -40px;
-		    margin-right: -40px;
-		    transition: 0.3s ease-in-out;
+				top: 0px;
+				left: 0px;
+				right: 0px;
+				transition: 0.8s $ease;
 				&:hover {
 					background: $darkgrey;
 					border-radius: 4px;
@@ -85,6 +91,6 @@
 
 @include media-breakpoint-up(lg) {
 	.mod-filterblocks {
-    height: 60px;
+
   }
 }

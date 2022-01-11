@@ -12,7 +12,7 @@
 		{% set delay = 200 %}
 		{% for card in fields.accordion %}
 		  <div class="item">
-	      <a id="heading{{ rownr }}" class="heading" data-toggle="collapse" data-target="#collapse{{ rownr }}" aria-controls="collapse{{ rownr }}">
+	      <a id="heading_{{ block.id }}_{{ rownr }}" class="heading" data-toggle="collapse" data-target="#collapse_{{ block.id }}_{{ rownr }}" aria-controls="collapse_{{ block.id }}_{{ rownr }}">
 	      	<div class="row">
 		      	<div class="col-auto" style="width: 20px">
 		      		<i class="fal fa-chevron-right"></i>
@@ -23,7 +23,7 @@
 	      	</div>
 	      </a>
 		
-		    <div id="collapse{{ rownr }}" class="collapse" aria-labelledby="heading{{ rownr }}" data-parent="#accordion-{{ block.id }}">
+		    <div id="collapse_{{ block.id }}_{{ rownr }}" class="collapse" aria-labelledby="heading_{{ block.id }}_{{ rownr }}" data-parent="#accordion-{{ block.id }}">
 		    <div class="row">
 		      <div class="col-auto" style="width: 40px">
 		      	</div>

@@ -24,7 +24,7 @@
 	  			'supports'                => array( 'title', 'editor', 'thumbnail' ),
 	  		)
 	  	);
-	  	
+		  
 	  	register_post_type( 'referenties',
 	  	// CPT Options
 	  		array(
@@ -73,7 +73,7 @@
 	  	// CPT Options
 	  		array(
 	  			'labels' => array(
-	  				'name'                  => __( 'Fonts' ),
+	  				'name'                  => __( 'Gratis Fonts' ),
 	  				'singular_name'         => __( 'Font' ),
 	      		'all_items'             => __( 'Alle fonts' ),
 	      		'add_new_item'          => __( 'Nieuw font toevoegen' ),
@@ -86,34 +86,36 @@
 	  			),
 	  			'menu_icon'               => 'dashicons-editor-italic',
 	  			'public'                  => true,
+				  'rewrite'                 => array('slug' => 'freefonts'),
 	  			'has_archive'             => false,
 	  			'show_in_rest' 						=> true,
 	  			'supports'                => array( 'title', 'editor', 'thumbnail' ),
 	  		)
 	  	);
 	  	
-	  	register_post_type( 'anatomy',
-	  	// CPT Options
+		register_post_type( 'pro_fonts',
+  		// CPT Options
 	  		array(
-	  			'labels' => array(
-	  				'name'                  => __( 'Anatomie' ),
-	  				'singular_name'         => __( 'Anatomie' ),
-	      		'all_items'             => __( 'Alle anatomie' ),
-	      		'add_new_item'          => __( 'Nieuw anatomie toevoegen' ),
-	      		'new_item'              => __( 'Nieuw anatomie' ),
-	          'add_new'               => __( 'Nieuw anatomie' ),
-	      		'edit_item'             => __( 'Bewerk anatomie' ),
-	      		'update_item'           => __( 'Update anatomie' ),
-	      		'view_item'             => __( 'Bekijk anatomie' ),
-	      		'search_items'          => __( 'Zoek anatomie' ),
-	  			),
-	  			'menu_icon'               => 'dashicons-editor-italic',
-	  			'public'                  => true,
-	  			'has_archive'             => false,
-	  			'show_in_rest' 						=> true,
-	  			'supports'                => array( 'title', 'editor', 'thumbnail' ),
+		  		'labels' => array(
+			  		'name'                  => __( 'Fonts' ),
+			  		'singular_name'         => __( 'Font' ),
+		  		'all_items'             => __( 'Alle fonts' ),
+		  		'add_new_item'          => __( 'Nieuw font toevoegen' ),
+		  		'new_item'              => __( 'Nieuw font' ),
+	  		'add_new'               => __( 'Nieuw font' ),
+		  		'edit_item'             => __( 'Bewerk font' ),
+		  		'update_item'           => __( 'Update font' ),
+		  		'view_item'             => __( 'Bekijk font' ),
+		  		'search_items'          => __( 'Zoek font' ),
+		  		),
+		  		'menu_icon'               => 'dashicons-editor-italic',
+		  		'public'                  => true,
+		   		'has_archive'             => true,
+		   		'rewrite'                 => array('slug' => 'fonts'),
+		   		'supports'                => array( 'title', 'editor', 'thumbnail' ),
 	  		)
-	  	);
+  		);
+  
     		
   }
 

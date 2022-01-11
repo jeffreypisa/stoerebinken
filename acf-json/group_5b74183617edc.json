@@ -23,38 +23,6 @@
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_5d0390512d298",
-                            "label": "Achtergrond",
-                            "name": "achtergrond",
-                            "type": "select",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "choices": {
-                                "white": "Wit",
-                                "blue": "Blauw",
-                                "grey": "Grijs",
-                                "darkgrey": "Donkergrijs",
-                                "standaard": "Thema | Standaard",
-                                "light": "Thema | Licht",
-                                "dark": "Thema | Donker"
-                            },
-                            "default_value": [
-                                "white"
-                            ],
-                            "allow_null": 0,
-                            "multiple": 0,
-                            "ui": 0,
-                            "return_format": "value",
-                            "ajax": 0,
-                            "placeholder": ""
-                        },
-                        {
                             "key": "field_5e4519f3d486a",
                             "label": "Minder hoog",
                             "name": "minder_hoog",
@@ -74,13 +42,76 @@
                             "ui_off_text": ""
                         },
                         {
+                            "key": "field_5d0390512d298",
+                            "label": "Achtergrond kleur",
+                            "name": "achtergrond",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "white": "Wit",
+                                "blue": "Blauw",
+                                "grey": "Grijs",
+                                "darkgrey": "Donkergrijs",
+                                "standaard": "Thema | Standaard",
+                                "light": "Thema | Licht",
+                                "dark": "Thema | Donker"
+                            },
+                            "default_value": "white",
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "return_format": "value",
+                            "ajax": 0,
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_61dd99a6b408b",
+                            "label": "Layout",
+                            "name": "layout",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "afbeelding": "afbeelding",
+                                "vimeo": "vimeo"
+                            },
+                            "default_value": false,
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "return_format": "value",
+                            "ajax": 0,
+                            "placeholder": ""
+                        },
+                        {
                             "key": "field_5c3f4f6cee572",
                             "label": "Afbeelding",
                             "name": "afbeelding",
                             "type": "image",
                             "instructions": "",
                             "required": 0,
-                            "conditional_logic": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_61dd99a6b408b",
+                                        "operator": "==",
+                                        "value": "afbeelding"
+                                    }
+                                ]
+                            ],
                             "wrapper": {
                                 "width": "",
                                 "class": "",
@@ -98,8 +129,32 @@
                             "mime_types": ""
                         },
                         {
+                            "key": "field_61dd99dbb408c",
+                            "label": "Vimeo url",
+                            "name": "vimeo",
+                            "type": "url",
+                            "instructions": "example: https:\/\/player.vimeo.com\/video\/482956598",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_61dd99a6b408b",
+                                        "operator": "==",
+                                        "value": "vimeo"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": ""
+                        },
+                        {
                             "key": "field_5d0b5f7539acc",
-                            "label": "Overlay over afbeelding",
+                            "label": "Overlay",
                             "name": "overlay",
                             "type": "true_false",
                             "instructions": "",
@@ -1710,6 +1765,13 @@
                 "operator": "==",
                 "value": "werk"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "pro_fonts"
+            }
         ]
     ],
     "menu_order": 0,
@@ -1720,7 +1782,7 @@
     "hide_on_screen": [
         "the_content"
     ],
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1581597601
+    "modified": 1641913620
 }

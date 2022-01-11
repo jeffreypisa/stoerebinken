@@ -22,11 +22,7 @@ slick_init();
 matchheight_init();
 font();
 
-function removenavup() {     
-  $('header').removeClass('nav-up2');
-}
 
-setTimeout(removenavup, 1400)
 
 // lity_init();
 
@@ -37,6 +33,11 @@ $( document ).ready(function() {
 	scrollto();
 	sticky_header();
 	text_animation();
+	function removenavup() {     
+	  $('header').css('');
+	}
+	
+	setTimeout(removenavup, 1000);
 });
 
 $(window).on('load', function() {

@@ -3,7 +3,7 @@
 		<div class="row">
 			{% for item in item.afbeeldingen %}
 				{% if item.groot %}
-					<div class="col-12">
+					<div class="col-12" data-aos="fade-up">
 						{% if item.type == 'video' %}
 							<div class="video-container {% if item.schaduw %} with-shadow {% endif %}">
 								{{ item.video }}
@@ -13,7 +13,7 @@
 						{% endif %}
 					</div>
 				{% else %}
-					<div class="col-md-6">
+					<div class="col-md-6" data-aos="fade-up">
 						{% if item.type == 'video' %}
 							<div class="video-container {% if item.schaduw %} with-shadow {% endif %}">
 								{{ item.video }}

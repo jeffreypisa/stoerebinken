@@ -10,16 +10,19 @@
   			{% endif %}
   		</div>
   		<div class="col-md-3 col-xl-4">
-  			{% if options.footer_contact_title %}
-  				<h3> {{ options.footer_contact_title }} </h3>
-  			{% endif %}
   			<div class="row">
   				<div class="col-6 col-md-12 col-xl-6">
+            {% if options.footer_contact_title %}
+              <h3> {{ options.footer_contact_title }} </h3>
+            {% endif %}
 			  		{% if options.footer_contact_office1 %}
 		  				{{ options.footer_contact_office1 }}
 		  			{% endif %}	  			
   				</div>
   				<div class="col-6 col-md-12 col-xl-6">
+            {% if options.footer_contact_title2 %}
+              <h3> {{ options.footer_contact_title2 }} </h3>
+            {% endif %}
 		  			{% if options.footer_contact_office2 %}
 		  				{{ options.footer_contact_office2 }}
 		  			{% endif %}	

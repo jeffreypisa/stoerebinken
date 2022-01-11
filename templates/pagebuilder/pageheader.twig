@@ -1,6 +1,12 @@
 <section class="section{{ sectionno }} mod-pageheader {% if item.minder_hoog %} {% else %} big {% endif %} bg-darkgrey {% if item.text_white %} text-white {% endif %}">
-	<div class="bg" style="background-image: url({{ item.afbeelding|resize(1920) }});">
-	</div>
+	{% if item.layout == 'vimeo' %}	
+		<div class="vimeo-wrapper" {% if item.overlay %}style="opacity: .5"{% endif %}>
+			<iframe src="{{ item.vimeo }}?background=1" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+		</div>
+	{% else %}
+		<div class="bg {% if item.overlay %}overlay{% endif %}" style="background-image: url({{ item.afbeelding|resize(1920) }});">
+		</div>
+	{% endif %}
 	<div class="content w-100 h-100 d-flex align-items-center">
   	<div class="container">
     	<div class="row">

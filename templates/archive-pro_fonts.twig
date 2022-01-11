@@ -2,41 +2,41 @@
 
 {% block content %}
 	<section class="section1 mod-content bg-darkgrey overflow-visible">
-  	<div class="container">
+	  <div class="container">
 			<div class="row">
 			  <div class="col-md-10 col-lg-8 ">
-			    <h1 class="h1xl">
-			    	{% if author %} 
-			    		{% if author.titel_auteurspagina %} 
-			    			{{ author.titel_auteurspagina }} 
-			    		{% else %} 
-			    			{{ options.werk_titel }} van {{ author.name }} 
-			    		{% endif %} 
-			    	{% else %} 
-			    		{{ options.werk_titel }}  
-			    	{% endif %}
-			    </h1>
+				<h1 class="h1xl">
+					{% if author %} 
+						{% if author.titel_auteurspagina %} 
+							{{ author.titel_auteurspagina }} 
+						{% else %} 
+							{{ options.fonts_titel }} van {{ author.name }} 
+						{% endif %} 
+					{% else %} 
+						{{ options.fonts_titel }}  
+					{% endif %}
+				</h1>
 			  </div>
 			</div>
-			{% if options.werk_tekst %}
+			{% if options.fonts_tekst %}
 			  <div class="row">
-			  	<div class="col-lg-2" data-aos="fade-right" data-aos-duration="800">
-			  		{% if options.werk_link %}
-			    		<a class="btn-link d-none d-lg-inline-block" target="{{ options.werk_link.target }}" href="{{ options.werk_link.url }}">
-								{{ options.werk_link.title }} 
+				  <div class="col-lg-2" data-aos="fade-right" data-aos-duration="800">
+					  {% if options.fonts_link %}
+						<a class="btn-link d-none d-lg-inline-block" target="{{ options.fonts_link.target }}" href="{{ options.fonts_link.url }}">
+								{{ options.fonts_link.title }} 
 								{{ check }}
 							</a>
 						{% endif %}
-			  	</div>
+				  </div>
 					<div class="col-md-10 col-lg-8" data-aos="fade-in" data-aos-duration="800">
-			    	{{ options.werk_tekst }}
+					{{ options.fonts_tekst }}
 					</div>
 				</div>
 			{% endif %}
-			{% if options.werk_link %}
+			{% if options.fonts_link %}
 				<br>
-				<a class="btn-link d-lg-none" target="{{ options.werk_link.target }}" href="{{ options.werk_link.url }}">
-					{{ options.werk_link.title }} 
+				<a class="btn-link d-lg-none" target="{{ options.fonts_link.target }}" href="{{ options.fonts_link.url }}">
+					{{ options.fonts_link.title }} 
 				</a>
 			{% endif %}
 		</div>
@@ -71,16 +71,16 @@
 							</div>
 						</div>
 					</div>
-				</div>		
+				</div>
 				{% if current_category != '' %}
-					<a href="{{ site.url }}/werk" class="btn btn-tag"> {{ title }} <span style="margin-left: 10px"><i class="fas fa-times"></i></span></a>
+					<a href="{{ site.url }}/fonts" class="btn btn-tag"> {{ title }} <span style="margin-left: 10px"><i class="fas fa-times"></i></span></a>
 				{% endif %}
 			</div>
 		</section>
 	{% endif %}
   <section class="bg-white">
 		<div class="container">
-      <div class="cards cards-archive">
+	  <div class="cards cards-archive">
 				<div class="row">
 					{% set delay = '0' %}
 					{% for item in posts %}  
@@ -90,7 +90,7 @@
 						{% set delay = delay + '0' %}
 					{% endfor %}
 				</div>
-      </div>
-    </div>
+	  </div>
+	</div>
   </section>
 {% endblock %}

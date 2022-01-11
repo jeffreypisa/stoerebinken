@@ -7,16 +7,16 @@ body .mod-mobilemenu {
   left: 0;
   background-color: $darkgrey; 
   overflow-x: hidden;
-  transition: 0.4s;
+  transition: 1s $ease;
   .icons {
 	  padding: 40px 20px 60px;
-	  transition: 0.6s ease-in-out;
+	  transition: 0.6s $ease;
 	  opacity: 0;
 	  a {
 		  margin: 0 30px 0 0;
 		  display: block;
 		  transform: translateX(120px);
-      transition: 0.3s ease-in-out;
+      transition: 0.6s $ease;
 	  }
 	  img {
 		  width: 40px;
@@ -25,7 +25,7 @@ body .mod-mobilemenu {
   }
   .menucontent {
     display: inline-block;
-    transition: 0.6s ease-in-out;
+    transition: 1s $ease;
 		text-align: left;
     width: 100%;
     height: 100vh;
@@ -47,7 +47,7 @@ body .mod-mobilemenu {
       li {
         opacity: 0;
         transform: translateX(120px);
-        transition: 0.3s ease-in-out;
+        transition: 0.6s $ease;
         a {
           display: inline-block;
           color: #fff;
@@ -67,7 +67,7 @@ body .mod-mobilemenu {
 		      	height: 4px;
 		      	content: " ";
 		      	position: absolute;
-		      	transition: 0.2s ease-in;
+		      	transition: 0.4s $ease;
 		      	display: block;
 		    	}
 	      }
@@ -78,7 +78,7 @@ body .mod-mobilemenu {
 
 body {
 	.site-wrapper {
-		transition: transform 0.3s ease-in-out;
+		transition: transform 1s $ease;
 		background: $darkgrey;
 		&:after {
 			position: absolute;
@@ -90,7 +90,7 @@ body {
 			content: '';
 			background: $darkgrey;
 			opacity: 0;
-			transition: opacity 0.3s ease-in-out;
+			transition: opacity 1s $ease;
 		}
 	}
 }
@@ -120,7 +120,7 @@ body.opensidemenu {
   .mod-mobilemenu {
     opacity: 1;
     top: 0;
-    transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.6s $ease;
     transform: translateZ(0);
     z-index: 0;
     width: calc(100vw - 80px);
