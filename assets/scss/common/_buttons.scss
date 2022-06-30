@@ -62,14 +62,18 @@ body .nf-form-content input[type=submit] {
 	}
 }
 
-.btn-tag {
+.btn.btn-tag {
 	background: $grey;
 	color: #fff;
-	height: 20px;
-	line-height: 20px;
+	height: 40px;
+	line-height: 38px;
 	padding: 0 15px;
 	font-size: 14px;
 	text-transform: uppercase;
+	&:hover {
+		background: $dark;
+		color: #fff;
+	}
 }
 
 .btn-light:not(:disabled):not(.disabled) {

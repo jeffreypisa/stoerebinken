@@ -1,26 +1,44 @@
-<section class="section{{ sectionno }} bg-{{ item.achtergrond }}">
-  <div class="container">
-  	{% include 'pagebuilder/parts/content.twig' %}
-  	<br>
-  	{% if item.referenties %}
-  		<div class="row">
-		    {% for item in item.referenties %}
-		    	<div class="col-md-6 col-lg-4">
-			      <div class="item">
-			      	{% include 'tease-referenties.twig' %}
-			      </div>
-		    	</div>
-		    {% endfor %}	
-  		</div>	
-  	{% endif %}
-  	{% if item.knop %}
-  		<br>
-  		<br>
-  		<div class="text-center">
-				<a class="btn-link" target="{{ item.knop.target }}" href="{{ item.knop.url }}">
-					{{ item.knop.title }} 
-				</a>
-  		</div>
+<section id="section{{ sectionno }} mod-referenties bg-{{ item.achtergrond }}">
+	<div class="container">
+		{% include 'pagebuilder/parts/content.twig' %}
+		<br>
+		{% if item.referenties %}
+		<div class="row">
+			{% for referentie in item.referenties %}
+			<div class="col-md-6 col-lg-4">
+				<div class="item {% if item.achtergrond == 'darkgrey' %}text-white{% endif %}">
+					<div class="tease card {% if loop.index is odd %} odd {% endif %}">
+						<div class="balloon text-center d-flex flex-column align-items-center" style="background: url({{ Image(referentie.thumbnail).src|resize(768) }}); background-size: cover; background-position: center center; padding-bottom: 57%; margin-bottom: 10px;" data-aos="fade-in" data-aos-duration="800">
+							<img class="corner" src="{{ theme.link }}/assets/images/balloon_corner{% if item.achtergrond == 'darkgrey' %}_darkgrey{% endif %}.svg" alt="balloon_corner">
+							<div class="arrow"></div>
+						</div>
+						<h5 style="margin: 0; color: #00ACFF">{{ referentie.naam }}</h5>
+						<div> {{ referentie.functie }} </div>
+						<h3 style="margin-bottom: 20px"> {{ referentie.titel }} </h3>
+						{{ referentie.beschrijving }}
+                {% if referentie.knop %}
+						<div class="clearfix"></div>
+						<br>
+						<a class="btn-link" target="{{ referentie.knop.target }}" href="{{ referentie.knop.url }}">
+							{{ referentie.knop.title }}
+						</a>
+						{% endif %}
+						<br>
+						<br>
+					</div>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
 		{% endif %}
-  </div>
+		{% if item.knop %}
+		<br>
+		<br>
+		<div class="text-center">
+			<a class="btn-link" target="{{ item.knop.target }}" href="{{ item.knop.url }}">
+				{{ item.knop.title }}
+			</a>
+		</div>
+		{% endif %}
+	</div>
 </section>

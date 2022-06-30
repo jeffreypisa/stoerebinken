@@ -25,6 +25,16 @@
 		h3 {
 			margin-bottom: 15px;
 		}
+		
+		.fontcats {
+			a:not(.btn) h3 {
+				transition: 0.5s $ease;
+			}
+			a:not(.btn):hover h3,
+			a:not(.btn).active h3 {
+				color: $blue;
+			}
+		}
 		.topcats {
 			z-index: 4;
 			padding: 20px;
