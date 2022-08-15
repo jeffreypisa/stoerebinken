@@ -124,14 +124,14 @@
 
 @include media-breakpoint-up(md) {
   .mod-pageheader.big {
-		height: 640px;
+		height: 540px;
   }
 }
 
 @include media-breakpoint-up(lg) {
   .mod-pageheader.big {
     height: calc(100vh - 180px);
-    min-height: 780px;
-    max-height: 900px;    
+    min-height: 700px;
+    max-height: 700px;    
   }
 }
