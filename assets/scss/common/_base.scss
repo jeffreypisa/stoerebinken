@@ -218,6 +218,12 @@ ol li:before {
     text-align: left
 }
 
+.bg-dark {
+  ol li:before {
+    color: #fff;
+  }
+}
+
 .overlay {
   position: relative;
   float: left;
