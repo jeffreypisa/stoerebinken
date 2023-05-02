@@ -21,7 +21,7 @@
 	  			'public'                  => true,
 	  			'has_archive'             => true,
 	  			'rewrite'                 => array('slug' => 'werk'),
-	  			'supports'                => array( 'title', 'editor', 'thumbnail' ),
+	  			'supports'                => array( 'title', 'editor', 'thumbnail', 'revisions' ),
 	  		)
 	  	);
 		  
@@ -43,7 +43,7 @@
 	  			'menu_icon'               => 'dashicons-admin-comments',
 	  			'public'                  => true,
 	  			'has_archive'             => false,
-	  			'supports'                => array( 'title', 'editor', 'thumbnail' ),
+	  			'supports'                => array( 'title', 'editor', 'thumbnail', 'revisions' ),
 	  		)
 	  	);
        	  	
@@ -65,7 +65,7 @@
 	  			'menu_icon'               => 'dashicons-businessperson',
 	  			'public'                  => true,
 	  			'has_archive'             => false,
-	  			'supports'                => array( 'title', 'editor', 'thumbnail' ),
+	  			'supports'                => array( 'title', 'editor', 'thumbnail', 'revisions' ),
 	  		)
 	  	);
 	  	
@@ -89,7 +89,7 @@
 				  'rewrite'                 => array('slug' => 'freefonts'),
 	  			'has_archive'             => false,
 	  			'show_in_rest' 						=> true,
-	  			'supports'                => array( 'title', 'editor', 'thumbnail' ),
+	  			'supports'                => array( 'title', 'editor', 'thumbnail', 'revisions' ),
 	  		)
 	  	);
 	  	
@@ -112,7 +112,7 @@
 		  		'public'                  => true,
 		   		'has_archive'             => true,
 		   		'rewrite'                 => array('slug' => 'fonts'),
-		   		'supports'                => array( 'title', 'editor', 'thumbnail' ),
+		   		'supports'                => array( 'title', 'editor', 'thumbnail', 'revisions' ),
 	  		)
   		);
   

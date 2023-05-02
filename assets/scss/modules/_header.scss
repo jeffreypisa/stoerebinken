@@ -21,6 +21,49 @@ section.section1 {
 
 }
 
+.single-pro_fonts {
+	header {
+		&.tekst-zwart {
+			ul li {
+				&.menu-item-20890 a:not(.btn):after {
+					bottom: 6px;
+					left: 0;
+					width: 100%;
+					background: black;
+					height: 4px;
+					content: " ";
+					position: absolute;
+					transition: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+					display: block;
+				}
+				&.menu-item-20890 a:not(.btn):hover:after,
+				&.menu-item-20890 a:not(.btn):focus:after {
+					background: $blue;
+				}
+			}
+		}
+		&.tekst-wit {
+			ul li {
+				&.menu-item-20890 a:not(.btn):after {
+					bottom: 6px;
+					left: 0;
+					width: 100%;
+					background: #fff;
+					height: 4px;
+					content: " ";
+					position: absolute;
+					transition: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+					display: block;
+				}
+				&.menu-item-20890 a:not(.btn):hover:after,
+				&.menu-item-20890 a:not(.btn):focus:after {
+					background: $blue;
+				}
+			}
+		}
+	}
+}
+
 header {
   z-index: 99;
 	background: #fff;

@@ -2,10 +2,10 @@
   <div class="container">
     {% include 'pagebuilder/parts/content.twig' %}
     {% if item.accordion %}
-      <div class="mod-accordion">
+        <br>
         <div class="row">
           <div class="col-md-10 col-lg-8 offset-md-1 offset-lg-2">
-            <div id="block-{{ sectionno }}" class="mod-accordion">
+            <div id="block-{{ sectionno }}" class="mod-accordion mb-0">
               <div class="accordion" id="accordion-{{ sectionno }}">
                 {% set rownr = 1 %}
                 {% set delay = 200 %}
@@ -39,7 +39,6 @@
             </div>
           </div>
         </div>
-      </div>
     {% endif %}
   </div>
 </section>

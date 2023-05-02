@@ -41,7 +41,7 @@
 	.nf-form-content {
 		padding: 0;
 		select.ninja-forms-field {
-			background-image: url(../images/chevrondown.png);
+			// background-image: url(../images/chevrondown.png);
 			background-repeat: no-repeat;
 			background-position: right 15px center;
 			background-size: 20px;
@@ -95,7 +95,7 @@
 	  .nf-error .ninja-forms-field {
 		  border: 2px solid #fff;
 	  }
-	  textarea, select, input:not([type=checkbox]):not([type=radio]):not([type=button]) {
+	  textarea, select, input:not([type=checkbox]):not([type=radio]):not([type=button]):not([type=submit]) {
 	    -webkit-appearance: none;
 	    -moz-appearance: none;
 	    appearance: none;
