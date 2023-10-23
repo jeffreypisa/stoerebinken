@@ -2,9 +2,9 @@ import $ from "jquery";
 import Bootstrap from 'bootstrap';
 
 // Init plugins
-import { AOS_init } from './scripts/aos.js';
+import { AOS_init } from './scripts/aos_init.js';
 import { slick_init } from './scripts/slick.js';
-import { matchheight_init } from './scripts/matchheight.js';
+import { matchheight_init } from './scripts/matchheight_init.js';
 // import { lity_init } from './scripts/lity.js';
 
 // Scripts

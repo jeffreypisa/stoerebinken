@@ -6,4 +6,25 @@ body #daextlwcnf-cookie-notice-message {
 	margin-top: 7px !important;
 	margin-bottom: 0 !important;
 	font-family: 'Titillium Web';
+	&:hover {
+		text-transform: none !important;
+	}
+}
+body #daextlwcnf-cookie-notice-message a {
+	font-size: 22px !important;
+	line-height: 26px !important;
+	font-weight: bold !important;
+	color: $blue !important;
+	margin-top: 7px !important;
+	margin-bottom: 0 !important;
+	font-family: 'Titillium Web';
+	&:hover {
+		text-decoration: none !important;
+	}
+}
+
+body #daextlwcnf-cookie-notice-button-1,
+body #daextlwcnf-cookie-notice-button-2 {
+	font-weight: 700 !important;
+	font-size: inherit !important;
 }

@@ -7,7 +7,7 @@
       "uuidString" : "61584BAE-0918-4335-A9E0-43F804360AAF"
     }
   ],
-  "creatorBuild" : "34484",
+  "creatorBuild" : "34518",
   "files" : {
     "\/.nova\/Publishing\/Stoere Binken Design.json" : {
       "ft" : 524288,
@@ -686,13 +686,13 @@
       "plM" : 3758088159,
       "prP" : 0
     },
-    "\/assets\/js\/scripts\/aos.js" : {
+    "\/assets\/js\/scripts\/aos_init.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/assets\/js\/scripts\/aos-min.js",
+      "oAP" : "\/assets\/js\/scripts\/aos_init-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -730,13 +730,13 @@
       "sC" : 3,
       "tS" : 0
     },
-    "\/assets\/js\/scripts\/matchheight.js" : {
+    "\/assets\/js\/scripts\/matchheight_init.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/assets\/js\/scripts\/matchheight-min.js",
+      "oAP" : "\/assets\/js\/scripts\/matchheight_init-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -3665,9 +3665,6 @@
       "no-return-assign" : {
         "active" : 0,
         "optionString" : "'except-parens'"
-      },
-      "no-return-await" : {
-        "active" : 0
       },
       "no-script-url" : {
         "active" : 0

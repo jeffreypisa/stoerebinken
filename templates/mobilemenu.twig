@@ -1,9 +1,9 @@
 <div class="mod-mobilemenu">
-	<div class="menucontent d-flex align-items-center">
+	<div class="menucontent d-flex align-items-start">
     <div class="container-fluid">
       {% include "menu.twig" with {'menu': menu.get_items} %}
       {% include "menu-taal.twig" with {'taalmenu': taalmenu.get_items} %}
-      {% if options.telefoon or options.whatsapp %}
+      {% if options._telefoon or options._whatsapp %}
       	<div class="icons">
 					<div class="row h-100 no-gutters">
 						{% if options.telefoon %}

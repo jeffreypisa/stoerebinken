@@ -33,10 +33,13 @@ body .mod-mobilemenu {
 	    margin-bottom: 10px;
     }
     ul.menu {
-		  padding: 20px 20px 0;
+		  padding: 40px 20px;
 		  ul.menu {
 			  padding: 0 0 0 20px;
 		  }
+	  }
+	  ul.menu.taalmenu {
+		  padding: 0 20px 100px !important;
 	  }
     ul {
       list-style-type: none;
