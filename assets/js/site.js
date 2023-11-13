@@ -5,6 +5,7 @@ import Bootstrap from 'bootstrap';
 import { AOS_init } from './scripts/aos_init.js';
 import { slick_init } from './scripts/slick.js';
 import { matchheight_init } from './scripts/matchheight_init.js';
+import { menugrid } from './menugrid/index.js';
 // import { lity_init } from './scripts/lity.js';
 
 // Scripts
@@ -17,12 +18,10 @@ import { sticky_header } from './scripts/sticky_header.js';
 import { font } from './scripts/font.js';
 import { text_animation } from './scripts/text_animation.js';
 
-
 slick_init();
 matchheight_init();
 font();
-
-
+menugrid();
 
 // lity_init();
 

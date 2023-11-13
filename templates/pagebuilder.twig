@@ -35,7 +35,7 @@
 	{% elseif item.acf_fc_layout == 'lead' %}
 		{% include 'pagebuilder/lead.twig' %}
 		
-  {% elseif item.acf_fc_layout == 'logos' %}
+	{% elseif item.acf_fc_layout == 'logos' %}
 		{% include 'pagebuilder/logos.twig' %}
 		
 	{% elseif item.acf_fc_layout == 'pageheader' %}
@@ -43,6 +43,9 @@
 	
 	{% elseif item.acf_fc_layout == 'projecten' %}
 		{% include 'pagebuilder/projecten.twig' %}
+	
+	{% elseif item.acf_fc_layout == 'projecten_uitgelicht' %}
+		{% include 'pagebuilder/projecten_uitgelicht.twig' %}
 		
 	{% elseif item.acf_fc_layout == 'quote' %}
 		{% include 'pagebuilder/quote.twig' %}

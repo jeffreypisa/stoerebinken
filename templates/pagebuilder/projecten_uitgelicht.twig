@@ -1,0 +1,58 @@
+<section class="section{{ sectionno }} mod-projecten-uitgelicht bg-{{ item.achtergrond }}">
+	<div class="container">
+		{% include 'pagebuilder/parts/content.twig' %}
+		<br>
+		<div class="js-menugrid">
+			{% if item.categorie %}
+				<div class="thelist">
+					<div class="cover"></div>
+					{% for categorie in item.categorie %}
+						<div class="row">
+							<div class="cell cell--text">
+								<h2 class="cell__title oh"><span class="oh__inner">{{ categorie.titel }}</span></h2>
+							</div>
+							<div class="cell cell--images">
+								{% for werk in categorie.werk %}
+									<a href="{{ werk.link }}" class="cell__img">
+										<div class="cell__img-inner" style="background-image:url('{{ Image(werk.thumbnail).src }}')"></div>
+									</a>
+								{% endfor %}
+							</div>
+						</div>
+			
+					{% endfor %}
+				</div>
+			{% endif %}
+			{% if item.categorie %}
+				<div class="preview">
+					<button class="preview__close unbutton">&#9587;</button>
+					{% for categorie in item.categorie %}
+						<div class="preview__item">
+							<h2 class="preview__item-title oh"><span class="oh__inner">{{ categorie.titel }}</span></h2>
+							<div class="grid">
+								<!--
+								{% for werk in categorie.werk|slice(3) %}
+									<div class="cell__img">
+										<div class="cell__img-inner" style="background-image:url('{{ Image(werk.thumbnail).src }}')"></div>
+									</div>
+								{% endfor %}
+							-->
+							</div>
+						</div>
+			
+					{% endfor %}
+				</div>
+			{% endif %}
+
+		{% if item.knop %}
+			<br>
+			<br>
+			<br>
+			<div class="text-center">
+				<a class="btn-link" target="{{ item.knop.target }}" href="{{ item.knop.url }}">
+					{{ item.knop.title }}
+				</a>
+			</div>
+		{% endif %}
+	</div>
+</section>
