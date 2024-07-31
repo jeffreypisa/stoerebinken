@@ -48,6 +48,9 @@ a.card[href] {
   margin-bottom: 30px;
   transition: 1s $ease;
   background: transparent;
+  &.card-sbdradius {
+	  border-radius: 20px 0 20px 0;
+  }
   &.fullheight {
   		height: calc(100% - 30px);
   }

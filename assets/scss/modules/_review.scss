@@ -1,0 +1,24 @@
+.strook-reviews {
+	.reviews {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 20px;
+		justify-content: center; /* Optioneel, zorgt ervoor dat items gecentreerd worden in de container */
+	}
+}
+
+@include media-breakpoint-up(sm) {
+	.strook-reviews {
+		.reviews {
+			justify-content: flex-start; /* Optioneel, zorgt ervoor dat items aan de linkerkant beginnen */
+		}
+	}
+}
+
+@include media-breakpoint-up(md) {
+	.strook-reviews {
+		.reviews {
+			justify-content: flex-start; /* Optioneel, zorgt ervoor dat items aan de linkerkant beginnen */
+		}
+	}
+}

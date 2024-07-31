@@ -1761,6 +1761,21 @@
       "pg" : 0,
       "sct" : 1
     },
+    "\/assets\/scss\/modules\/_review.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/scss\/modules\/_review.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 1
+    },
     "\/assets\/scss\/modules\/_slider.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -2724,6 +2739,14 @@
       "oAP" : "\/templates\/pagebuilder\/referenties.twig",
       "oF" : 0
     },
+    "\/templates\/pagebuilder\/reviews.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/templates\/pagebuilder\/reviews.twig",
+      "oF" : 0
+    },
     "\/templates\/partials\/author.twig" : {
       "cB" : 0,
       "ft" : 8192,
@@ -2842,6 +2865,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/templates\/tease-referenties.twig",
+      "oF" : 0
+    },
+    "\/templates\/tease-review.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/templates\/tease-review.twig",
       "oF" : 0
     },
     "\/templates\/tease-youtube.twig" : {

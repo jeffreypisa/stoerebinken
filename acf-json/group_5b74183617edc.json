@@ -1482,6 +1482,158 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_66aa12ed42da2": {
+                    "key": "layout_66aa12ed42da2",
+                    "name": "reviews",
+                    "label": "Reviews",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_66aa12ed42da3",
+                            "label": "Achtergrond",
+                            "name": "achtergrond",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "blue": "Blauw",
+                                "lightgrey": "Lichtgrijs",
+                                "grey": "Grijs",
+                                "darkgrey": "Donkergrijs",
+                                "standaard": "Thema | Standaard",
+                                "light": "Thema | Licht",
+                                "dark": "Thema | Donker"
+                            },
+                            "default_value": "lightgrey",
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "return_format": "value",
+                            "ajax": 0,
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_66aa12ed42da4",
+                            "label": "Titel",
+                            "name": "titel",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_66aa12ed42da7",
+                            "label": "Reviews",
+                            "name": "reviews",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "field_66aa137842da8",
+                            "min": 0,
+                            "max": 0,
+                            "layout": "table",
+                            "button_label": "Nieuwe review",
+                            "sub_fields": [
+                                {
+                                    "key": "field_66aa137842da8",
+                                    "label": "Naam",
+                                    "name": "naam",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_66aa16a9c0981",
+                                    "label": "Functie",
+                                    "name": "functie",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_66aa137b42da9",
+                                    "label": "Review",
+                                    "name": "review",
+                                    "type": "textarea",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "maxlength": "",
+                                    "rows": "",
+                                    "new_lines": ""
+                                },
+                                {
+                                    "key": "field_66aa138c42daa",
+                                    "label": "Link (optioneel)",
+                                    "name": "link",
+                                    "type": "link",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array"
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_5d35ce07841d5": {
                     "key": "layout_5d35ce07841d5",
                     "name": "foto_content",
@@ -2001,5 +2153,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1699975885
+    "modified": 1722423005
 }

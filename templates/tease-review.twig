@@ -1,0 +1,28 @@
+{% if item.link %}
+<a href="{{ item.link.url }}" target="{{ item.link.target }}" class="tease tease-review noline">
+{% else %}
+<div class="tease tease-review">
+{% endif %}
+	<div class="card card-sbdradius bg-white text-dark">
+		<div class="card-body">
+			<div class="row">
+				<div class="col naam">
+					{{ item.naam }} <br>
+				</div>
+				<div class="col-auto" style="font-size: 13px;">
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+				</div>
+			</div>
+			<p class="text-muted"> {{ item.functie }} </p>
+			{{ item.review }}
+		</div>
+	</div>
+{% if item.link %}
+</a>
+{% else %}
+</div>
+{% endif %}

@@ -6,3 +6,24 @@
 		padding-bottom: 6px;
 	}
 }
+
+
+.tease.tease-review {
+	.card {
+		.naam {
+			font-weight: 700;
+		}
+		.text-muted {
+			color: $grey !important;
+		}
+		i {
+			color: $blue;
+		}
+	}
+	&[href]:hover .card {
+		box-shadow: 0 30px 60px 0 rgba(0,0,0,0.60);
+		.naam {
+			color: $blue;
+		}
+	}
+}
