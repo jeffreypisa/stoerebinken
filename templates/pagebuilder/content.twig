@@ -1,44 +1,66 @@
 <section class="section{{ sectionno }} mod-content bg-{{ item.achtergrond }}">
-  <div class="container">
-    {% include 'pagebuilder/parts/content.twig' %}
-    {% if item.accordion %}
-        <br>
-        <div class="row">
-          <div class="col-md-10 col-lg-8 offset-md-1 offset-lg-2">
-            <div id="block-{{ sectionno }}" class="mod-accordion mb-0">
-              <div class="accordion" id="accordion-{{ sectionno }}">
-                {% set rownr = 1 %}
-                {% set delay = 200 %}
-                {% for card in item.accordion %}
-                  <div class="item">
-                    <a id="heading_{{ sectionno }}_{{ rownr }}" class="heading" data-toggle="collapse" data-target="#collapse_{{ sectionno }}_{{ rownr }}" aria-controls="collapse_{{ sectionno }}_{{ rownr }}">
-                      <div class="row">
-                        <div class="col-auto" style="width: 20px">
-                          <i class="fal fa-chevron-right"></i>
-                        </div>
-                        <div class="col">
-                          <h5>{{ card.vraag }}</h5>
-                        </div>
-                      </div>
-                    </a>
-                
-                    <div id="collapse_{{ sectionno }}_{{ rownr }}" class="collapse" aria-labelledby="heading_{{ sectionno }}_{{ rownr }}" data-parent="#accordion-{{ sectionno }}">
-                    <div class="row">
-                      <div class="col-auto" style="width: 40px">
-                        </div>
-                        <div class="col pt-3 pb-3">
-                          {{ card.antwoord }}
-                        </div>
-                    </div>
-                    </div>
-                  </div>
-                  {% set delay = delay + 200 %}
-                  {% set rownr = rownr + 1 %}
-                {% endfor %}
-              </div>
-            </div>
-          </div>
-        </div>
-    {% endif %}
-  </div>
+	<div class="container">
+		{% include 'pagebuilder/parts/content.twig' %}
+		{% if item.accordion %}
+		<br>
+		<div class="row">
+			<div class="col-md-10 col-lg-8 offset-md-1 offset-lg-2">
+				<div id="block-{{ sectionno }}" class="mod-accordion mb-0">
+					<div class="accordion" id="accordion-{{ sectionno }}">
+						{% set rownr = 1 %}
+						{% set delay = 200 %}
+						{% for card in item.accordion %}
+						<div class="item">
+							<a id="heading_{{ sectionno }}_{{ rownr }}" class="heading" data-toggle="collapse" data-target="#collapse_{{ sectionno }}_{{ rownr }}" aria-controls="collapse_{{ sectionno }}_{{ rownr }}">
+								<div class="row">
+									<div class="col-auto" style="width: 20px">
+										<i class="fal fa-chevron-right"></i>
+									</div>
+									<div class="col">
+										<h5>{{ card.vraag }}</h5>
+									</div>
+								</div>
+							</a>
+
+							<div id="collapse_{{ sectionno }}_{{ rownr }}" class="collapse" aria-labelledby="heading_{{ sectionno }}_{{ rownr }}" data-parent="#accordion-{{ sectionno }}">
+								<div class="row">
+									<div class="col-auto" style="width: 40px">
+									</div>
+									<div class="col pt-3 pb-3">
+										{{ card.antwoord }}
+									</div>
+								</div>
+							</div>
+						</div>
+						{% set delay = delay + 200 %}
+						{% set rownr = rownr + 1 %}
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		</div>
+		{% endif %}
+		{% if item.linkblok_tekst %}
+			<div class="row">
+				<div class="col-md-10 col-lg-8 offset-lg-2">
+					<div class="mod-link">
+						<div class="row">
+							<div class="col-auto">
+								<img src="
+								{% if item.linkblok_afbeelding %} 
+									{{ Image(item.linkblok_afbeelding).src }}
+								{% else %}
+									{{ Image(options.linkblok_afbeelding).src }}
+								{% endif %}
+								" style="margin: 0 !important"> 
+							</div>
+							<div class="col">
+								{{ item.linkblok_tekst }}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		{% endif %}
+	</div>
 </section>

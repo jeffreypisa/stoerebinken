@@ -1,38 +1,66 @@
-section.bg-white:not(.mod-slider) + section.bg-white,
-section.bg-color:not(.mod-slider) + section.bg-color,
-section.bg-fade:not(.mod-slider) + section.bg-white,
-section.bg-blue:not(.mod-slider) + section.bg-blue,
-.bg-color:not(.mod-slider) + .bg-blue .blok-color,
-section.bg-yellow:not(.mod-slider) + section.bg-yellow,
-section.bg-purple:not(.mod-slider) + section.bg-purple,
-section.bg-light:not(.mod-slider) + section.bg-light,
-section.bg-darkblue:not(.mod-slider) + section.bg-darkblue,
-section.bg-lichtbeige:not(.mod-slider) + section.bg-lichtbeige,
-section.bg-dark:not(.mod-slider) + section.bg-dark {
+section.bg-white:not(.mod-slider)+section.bg-white,
+section.bg-color:not(.mod-slider)+section.bg-color,
+section.bg-fade:not(.mod-slider)+section.bg-white,
+section.bg-blue:not(.mod-slider)+section.bg-blue,
+.bg-color:not(.mod-slider)+.bg-blue .blok-color,
+section.bg-yellow:not(.mod-slider)+section.bg-yellow,
+section.bg-purple:not(.mod-slider)+section.bg-purple,
+section.bg-light:not(.mod-slider)+section.bg-light,
+section.bg-darkblue:not(.mod-slider)+section.bg-darkblue,
+section.bg-lichtbeige:not(.mod-slider)+section.bg-lichtbeige,
+section.bg-dark:not(.mod-slider)+section.bg-dark {
 	padding-top: 20px !important;
 	margin-top: -20px !important;
 }
 
 section {
-  padding: 50px 0;
-  position: relative;
-  overflow: hidden;
+	padding: 50px 0;
+	position: relative;
+	overflow: hidden;
 	background-size: cover;
 	background-position: center center;
-  z-index: 1;
+	z-index: 1;
 }
+
 .archive section {
-  z-index: unset;
+	z-index: unset;
+}
+
+section.mod-content.bg-white+section.mod-content.bg-white,
+section.mod-content.bg-color+section.mod-content.bg-color,
+section.mod-content.bg-light+section.mod-content.bg-light,
+section.mod-content.bg-dark+section.mod-content.bg-dark,
+section.mod-content.bg-darkblue+section.mod-content.bg-darkblue {
+	padding-top: 0 !important;
+	margin-top: -50px !important;
 }
 
 @include media-breakpoint-up(md) {
-  section {
-    padding: 70px 0;
-  }
+	section {
+		padding: 70px 0;
+	}
+
+	section.mod-content.bg-white+section.mod-content.bg-white,
+	section.mod-content.bg-color+section.mod-content.bg-color,
+	section.mod-content.bg-light+section.mod-content.bg-light,
+	section.mod-content.bg-dark+section.mod-content.bg-dark,
+	section.mod-content.bg-darkblue+section.mod-content.bg-darkblue {
+		padding-top: 0 !important;
+		margin-top: -70px !important;
+	}
 }
 
 @include media-breakpoint-up(lg) {
-  section {
-    padding: 100px 0;
-  }
+	section {
+		padding: 100px 0;
+	}
+
+	section.mod-content.bg-white+section.mod-content.bg-white,
+	section.mod-content.bg-color+section.mod-content.bg-color,
+	section.mod-content.bg-light+section.mod-content.bg-light,
+	section.mod-content.bg-dark+section.mod-content.bg-dark,
+	section.mod-content.bg-darkblue+section.mod-content.bg-darkblue {
+		padding-top: 0 !important;
+		margin-top: -100px !important;
+	}
 }

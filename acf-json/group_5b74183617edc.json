@@ -537,6 +537,49 @@
                                     "delay": 0
                                 }
                             ]
+                        },
+                        {
+                            "key": "field_6784f5938fc92",
+                            "label": "Linkblok | Afbeelding",
+                            "name": "linkblok_afbeelding",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "medium",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_6784f5758fc90",
+                            "label": "Linkblok | Tekst",
+                            "name": "linkblok_tekst",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
                         }
                     ],
                     "min": "",
@@ -2153,5 +2196,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1722423005
+    "modified": 1736769634
 }
