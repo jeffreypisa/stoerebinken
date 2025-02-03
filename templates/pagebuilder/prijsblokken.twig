@@ -1,0 +1,30 @@
+<section id="{{ item.titel|sanitize|default('strook_' ~ sectionno) }}" class="strook-{{ item.acf_fc_layout }} bg-{{ item.achtergrond|default('grey') }}"">
+	<div class="container">
+		{% if item.titel %}
+		<div class="text-center">
+			<h2 class="mb-4 mb-5">{{ item.titel }}</h2>
+		</div>
+		{% endif %}
+		{% if item.prijsblokken %}
+			<div class="row">
+				{% for item in item.prijsblokken %}
+					<div class="col-md-4">
+						<a href="{{ item.link.url }}" target="{{ item.link.target }}" class="tease-prijsblokken card card-sbdradius bg-white text-dark">
+							<div class="card-body">
+								<div data-mh>
+									<h3 class="text-blue">{{ item.titel }}</h3>
+									{{ item.tekst }}
+									<div class="bg-lightblue p-2 mt-3 mb-3 text-center font-weight-bold">
+										{{ item.prijs }}
+									</div>
+									{{ item.usps }}
+								</div>
+								<div class="btn btn-primary btn-block mt-3"> {{ item.link.title }}</div>
+							</div>
+						</a>
+					</div>
+				{% endfor %}
+			</div>
+		{% endif %}
+	</div>
+</section>

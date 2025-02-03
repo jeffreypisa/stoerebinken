@@ -46,6 +46,13 @@ figcaption {
 		}
 	}
 }
+
+.last-element-mb-0 {
+    > * {
+        margin-bottom: 0 !important; 
+    } 
+}
+
 input[type=text],
 input[type=email],
 input[type=user],

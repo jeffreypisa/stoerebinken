@@ -7,7 +7,7 @@
       "uuidString" : "61584BAE-0918-4335-A9E0-43F804360AAF"
     }
   ],
-  "creatorBuild" : "34627",
+  "creatorBuild" : "34678",
   "files" : {
     "\/.nova\/Publishing\/Stoere Binken Design.json" : {
       "ft" : 524288,
@@ -1609,6 +1609,19 @@
       "oS" : 1,
       "pg" : 0
     },
+    "\/assets\/scss\/modules\/_prijsblokken.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/scss\/modules\/_prijsblokken.css",
+      "oF" : 0,
+      "oS" : 1,
+      "pg" : 0
+    },
     "\/assets\/scss\/modules\/_projecten-uitgelicht.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -2569,6 +2582,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/templates\/pagebuilder\/parts\/content.twig",
+      "oF" : 0
+    },
+    "\/templates\/pagebuilder\/prijsblokken.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/templates\/pagebuilder\/prijsblokken.twig",
       "oF" : 0
     },
     "\/templates\/pagebuilder\/projecten_uitgelicht.twig" : {

@@ -14,6 +14,19 @@
   }
 }
 
+.bg-lightblue {
+  background-color: $lightblue;
+  .btn-light:not(:disabled):not(.disabled) {
+	  background-color:#fff;
+	  border-color: #fff;
+	  &:hover {
+		  background-color: $grey;
+			border-color: $grey;
+	  }
+  }
+}
+
+
 .bg-grey {
   background-color: $grey;
 }
@@ -62,4 +75,8 @@
 			background: $darkgrey;
 		}
 	}
+}
+
+.text-blue {
+	color: $blue !important;	
 }
