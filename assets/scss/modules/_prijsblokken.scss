@@ -1,6 +1,39 @@
-.mod-prijsblokken {
+.strook-prijsblokken {
 	.tease-prijsblokken:hover .btn {
 		background-color: rgb(51, 188.6, 255);
 		border-color: rgb(51, 188.6, 255);
+	}
+	ul {
+		list-style: none; /* Verwijder standaard opsommingstekens */
+		padding: 0;
+		margin: 0;
+	}
+	
+	ul li {
+		position: relative;
+		padding-left: 2rem; /* Ruimte voor het icoon */
+		padding-bottom: 0.5rem; /* Ruimte voor de streep */
+		padding-top: 0.5rem;
+		border-bottom: 1px solid $lightgrey; /* Streep tussen de items */
+		display: flex;
+		align-items: center;
+	}
+	
+	/* Laatste li geen border onderaan */
+	ul li:last-child {
+		border-bottom: none;
+	}
+	
+	/* Voeg het Font Awesome checkbox-icoon toe */
+	ul li::before {
+		content: "\f058"; /* Font Awesome checked-circle icoon */
+		font-family: "Font Awesome 5 Free";
+		font-weight: 900; /* Zorgt ervoor dat het solid icoon wordt geladen */
+		color: $dark; /* Blauwe kleur, pas aan naar wens */
+		font-size: 1.2rem; /* Grootte van het icoon */
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
 	}
 }
