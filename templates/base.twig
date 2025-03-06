@@ -5,7 +5,7 @@
 	</head>
 {% endblock %}
 	
-  <body class="{{ body_class }} {{ posttype_current }} {% if post.header_transparent or posttype_current == 'werk' or posttype_current == 'pro_fonts' or posttype_current == 'post' or fn('is_404') %} header-transparent {% endif %}" data-template="base.twig" style="background-color: {{ post.kleur_standaard_achtergrond }}">
+  <body class="{{ body_class }} {{ posttype_current }} {% if post.header_transparent or posttype_current == 'werk' or posttype_current == 'pro_fonts' or posttype_current == 'post' or posttype_current == 'producten' or fn('is_404') %} header-transparent {% endif %}" data-template="base.twig" style="background-color: {{ post.kleur_standaard_achtergrond }}">
     {% include 'mobilemenu.twig' %}
     <a id="mobilemenubtn" class="btn-menu close js-menu d-block d-md-none">
       <div class="lines">

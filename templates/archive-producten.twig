@@ -1,0 +1,86 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<section class="section1 mod-content bg-darkgrey overflow-visible">
+	  <div class="container">
+			<div class="row">
+			  <div class="col-md-10 col-lg-8 ">
+				<h1 class="h1xl">
+					{{ options.producten_titel }}
+				</h1>
+			  </div>
+			</div>
+			{% if options.producten_tekst %}
+			  <div class="row">
+				  <div class="col-lg-2" data-aos="fade-right" data-aos-duration="800">
+					  {% if options.producten_link %}
+						<a class="btn-link d-none d-lg-inline-block" target="{{ options.producten_link.target }}" href="{{ options.producten_link.url }}">
+								{{ options.producten_link.title }} 
+								{{ check }}
+							</a>
+						{% endif %}
+				  </div>
+					<div class="col-md-10 col-lg-8" data-aos="fade-in" data-aos-duration="800">
+					{{ options.producten_tekst }}
+					</div>
+				</div>
+			{% endif %}
+			{% if options.producten_link %}
+				<br>
+				<a class="btn-link d-lg-none" target="{{ options.producten_link.target }}" href="{{ options.producten_link.url }}">
+					{{ options.producten_link.title }} 
+				</a>
+			{% endif %}
+		</div>
+	</section>
+	{% if categories %}
+		<section class="mod-filterblocks d-none d-md-block bg-white">
+			<div class="container">
+				<div class="menubar">
+					<div class="row">
+						<div class="col-md-auto">
+							<a href="{{ posttype_link }}" class="{% if current_category == '' %} active {% endif %}"><h3>{{ options.alle }} <i class="fas fa-chevron-down"></i></h3></a>
+						</div>
+						<div class="col-md">
+							<div class="topcats">
+								<div class="row">
+									{% for item in categories %}
+											<div class="col-md-auto">
+												<a href="{{ item.link }}" class="{% if item.id == current_category %} active {% endif %}"><h3>{{ item.title }} <i class="fas fa-chevron-down"></i></h3></a>
+												<div class="set">
+													{% set parentid = item.id %}
+													{% for item in child_categories %}
+														{% if parentid == item.parent %}
+															<div><a href="{{ item.link }}" class="{% if item.id == current_category %} active {% endif %}">{{ item.title }}</a></div>
+														{% endif %}
+													{% endfor %}
+												</div>
+											</div>
+									{% endfor %}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>		
+				{% if current_category != '0' %}
+					<a href="{{ site.url }}/producten" class="btn btn-tag"> {{ title }} <span style="margin-left: 10px"><i class="fas fa-times"></i></span></a>
+				{% endif %}
+			</div>
+		</section>
+	{% endif %}
+  <section class="bg-white">
+		<div class="container">
+	  <div class="cards cards-archive">
+				<div class="row">
+					{% set delay = '0' %}
+					{% for item in posts %}  
+						<div class="col-sm-6" data-aos-duration="800" data-aos-delay="{{delay}}">
+							{% include 'tease-post-rectangle.twig' %}
+						</div>
+						{% set delay = delay + '0' %}
+					{% endfor %}
+				</div>
+	  </div>
+	</div>
+  </section>
+{% endblock %}

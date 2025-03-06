@@ -25,6 +25,28 @@
 	  		)
 	  	);
 		  
+		  register_post_type( 'producten',
+			  array(
+				  'labels' => array(
+					  'name'                  => __( 'Producten' ),
+					  'singular_name'         => __( 'Product' ),
+					  'all_items'             => __( 'Alle producten' ),
+					  'add_new_item'          => __( 'Nieuw product toevoegen' ),
+					  'new_item'              => __( 'Nieuw product' ),
+					  'add_new'               => __( 'Nieuw product' ),
+					  'edit_item'             => __( 'Bewerk product' ),
+					  'update_item'           => __( 'Update product' ),
+					  'view_item'             => __( 'Bekijk product' ),
+					  'search_items'          => __( 'Zoek product' ),
+				  ),
+				  'menu_icon'               => 'dashicons-cart',
+				  'public'                  => true,
+				  'has_archive'             => true,
+				  'rewrite'                 => array('slug' => 'producten'),
+				  'supports'                => array( 'title', 'editor', 'thumbnail', 'revisions' ),
+			  )
+		  );
+		  
 	  	register_post_type( 'referenties',
 	  	// CPT Options
 	  		array(

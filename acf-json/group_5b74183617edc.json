@@ -2357,6 +2357,13 @@
                 "operator": "==",
                 "value": "pro_fonts"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "producten"
+            }
         ]
     ],
     "menu_order": 0,
@@ -2369,5 +2376,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1737987035
+    "modified": 1741193038
 }

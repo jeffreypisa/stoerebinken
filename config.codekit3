@@ -2232,6 +2232,14 @@
       "oAP" : "\/templates\/archive-pro_fonts.twig",
       "oF" : 0
     },
+    "\/templates\/archive-producten.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/templates\/archive-producten.twig",
+      "oF" : 0
+    },
     "\/templates\/archive-werk.twig" : {
       "cB" : 0,
       "ft" : 8192,
@@ -2678,6 +2686,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/templates\/single-pro_fonts.twig",
+      "oF" : 0
+    },
+    "\/templates\/single-producten.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/templates\/single-producten.twig",
       "oF" : 0
     },
     "\/templates\/single-werk.twig" : {

@@ -17,15 +17,27 @@
 		.bg-standaard .btn-link:not(.btn):before  {
 			color: {{ post.kleur_standaard_tekst }} !important;
 		}
-		.bg-standaard a[href]:not(.btn) {
+		.bg-standaard a[href]:not(.btn):not(.tease-prijsblokken) {
 			color: {{ post.kleur_standaard_link }} !important;
 		}
-		.bg-standaard a[href]:not(.btn):after,
-		.bg-standaard a[href]:not(.btn):hover:after,
+		.bg-standaard a[href]:not(.btn):not(.tease-prijsblokken):after,
+		.bg-standaard a[href]:not(.btn):not(.tease-prijsblokken):hover:after,
 		.bg-standaard .quote .lead:after,
 		.bg-standaard .btn-link-big:after,
 		.bg-standaard .btn-link:after {
 			background: {{ post.kleur_standaard_link }} !important;
+		}
+		
+		.bg-standaard .mod-link {
+			background: #fff;
+		}
+		
+		.bg-standaard .tease-prijsblokken .bg-lightblue {
+			background: #f0f0f0;
+		}
+		.bg-standaard .tease-prijsblokken .btn.btn-primary {
+			background-color: {{ post.kleur_standaard_link }} !important;
+			color: #fff !important;
 		}
 		
 		.bg-light {
@@ -39,18 +51,29 @@
 		.bg-light .btn-link:not(.btn):before {
 			color: {{ post.kleur_licht_tekst }} !important;
 		}
-		.bg-light a[href]:not(.btn) {
+		.bg-light a[href]:not(.btn):not(.tease-prijsblokken) {
 			color: {{ post.kleur_licht_link }} !important;
 		}
-		.bg-light a[href]:not(.btn):after, {
+		.bg-light a[href]:not(.btn):not(.tease-prijsblokken):after, 
+		.bg-light a[href]:not(.btn):not(.tease-prijsblokken):hover:after {
 			background: {{ post.kleur_licht_link }} !important;
 		}
-		.bg-light a[href]:not(.btn):after,
-		.bg-light a[href]:not(.btn):hover:after,
 		.bg-light .quote .lead:after,
 		.bg-light .btn-link-big:after,
 		.bg-light .btn-link:after { 
 			background: {{ post.kleur_licht_titel }} !important;
+		}
+		
+		.bg-light .mod-link {
+			background: #f0f0f0;
+		}
+		
+		.bg-light .tease-prijsblokken .bg-lightblue {
+			background: #f0f0f0;
+		}
+		.bg-light .tease-prijsblokken .btn.btn-primary {
+			background-color: {{ post.kleur_licht_link }} !important;
+			color: #fff !important;
 		}
 		
 		.bg-dark {
@@ -64,16 +87,28 @@
 		.bg-dark .btn-link:not(.btn):before {
 			color: {{ post.kleur_donker_tekst }} !important;
 		}
-		.bg-dark a[href]:not(.btn) {
+		.bg-dark a[href]:not(.btn):not(.tease-prijsblokken) {
 			color: {{ post.kleur_donker_link }} !important;
 		}
-		.bg-dark a[href]:not(.btn):after,
-		.bg-dark a[href]:not(.btn):hover:after,
+		.bg-dark a[href]:not(.btn):not(.tease-prijsblokken):after,
+		.bg-dark a[href]:not(.btn):not(.tease-prijsblokken):hover:after,
 		.bg-dark .quote .lead:after,
 		.bg-dark .btn-link-big:after,
 		.bg-dark .btn-link:after {
 			background: {{ post.kleur_donker_link }} !important;
 		}	
+		
+		.bg-dark .mod-link {
+			background: #fff;
+		}
+		
+		.bg-dark .tease-prijsblokken .bg-lightblue {
+			background: #f0f0f0;
+		}
+		.bg-dark .tease-prijsblokken .btn.btn-primary {
+			background-color: {{ post.kleur_donker_link }} !important;
+			color: #fff !important;
+		}
 	</style>
 	<div class="content-wrapper">
 		{% set sectionno = sectionno + 1 %}

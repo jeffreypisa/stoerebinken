@@ -37,6 +37,15 @@ if ($currentPostType == 'werk') {
 	$context['child_categories'] = $terms_childs;
 	$thecat = 'werk-categorie';
 	$context['posttype_link'] = get_post_type_archive_link( 'werk' );
+
+} elseif ($currentPostType == 'producten') {  // Voeg Producten toe
+	$terms = \Timber::get_terms(array('taxonomy' => 'producten-categorie', 'parent' => 0, 'orderby' => 'slug', 'hide_empty' => true)); 
+	$terms_childs = \Timber::get_terms(array('taxonomy' => 'producten-categorie', 'orderby' => 'slug', 'hide_empty' => true)); 
+	$context['categories'] = $terms;
+	$context['child_categories'] = $terms_childs;
+	$thecat = 'producten-categorie';
+	$context['posttype_link'] = get_post_type_archive_link( 'producten' );
+
 } elseif ($currentPostType == 'pro_fonts') {
 	$terms = \Timber::get_terms(array('taxonomy' => 'fonts-categorie', 'parent' => 0, 'orderby' => 'slug', 'hide_empty' => true)); 
 	$terms_childs = \Timber::get_terms(array('taxonomy' => 'fonts-categorie', 'orderby' => 'slug', 'hide_empty' => true)); 
