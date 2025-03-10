@@ -1,11 +1,11 @@
-<section class="section{{ sectionno }} mod-content bg-{{ item.achtergrond }}">
+<section class="section{{ sectionno }} mod-content bg-{{ item.achtergrond }} {% if item.geen_ruimte_tussen_content_strook_hierboven %}mt-zero{% endif %}">
 	<div class="container">
 		{% include 'pagebuilder/parts/content.twig' %}
 		{% if item.accordion %}
 		<br>
 		<div class="row">
 			<div class="col-md-10 col-lg-8 offset-md-1 offset-lg-2">
-				<div id="block-{{ sectionno }}" class="mod-accordion mb-0">
+				<div id="block-{{ sectionno }}" class="mod-accordion mb-4">
 					<div class="accordion" id="accordion-{{ sectionno }}">
 						{% set rownr = 1 %}
 						{% set delay = 200 %}

@@ -71,7 +71,7 @@
 				<div class="row">
 					{% set delay = '0' %}
 					{% for item in posts %}  
-						<div class="col-sm-6" data-aos-duration="800" data-aos-delay="{{delay}}">
+						<div class="col-sm-6 col-md-4" data-aos-duration="800" data-aos-delay="{{delay}}">
 							{% include 'tease-post-rectangle.twig' %}
 						</div>
 						{% set delay = delay + '0' %}

@@ -580,6 +580,25 @@
                             "toolbar": "full",
                             "media_upload": 1,
                             "delay": 0
+                        },
+                        {
+                            "key": "field_67cea8c60c925",
+                            "label": "Geen ruimte tussen content strook hierboven",
+                            "name": "geen_ruimte_tussen_content_strook_hierboven",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
                         }
                     ],
                     "min": "",
@@ -2376,5 +2395,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1741193038
+    "modified": 1741596929
 }

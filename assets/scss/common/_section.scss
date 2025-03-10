@@ -31,8 +31,10 @@ section.mod-content.bg-color+section.mod-content.bg-color,
 section.mod-content.bg-light+section.mod-content.bg-light,
 section.mod-content.bg-dark+section.mod-content.bg-dark,
 section.mod-content.bg-darkblue+section.mod-content.bg-darkblue {
-	padding-top: 0 !important;
-	margin-top: -50px !important;
+	&.mt-zero {
+		padding-top: 0 !important;
+		margin-top: -50px !important;
+	}	
 }
 
 @include media-breakpoint-up(md) {
@@ -45,8 +47,10 @@ section.mod-content.bg-darkblue+section.mod-content.bg-darkblue {
 	section.mod-content.bg-light+section.mod-content.bg-light,
 	section.mod-content.bg-dark+section.mod-content.bg-dark,
 	section.mod-content.bg-darkblue+section.mod-content.bg-darkblue {
-		padding-top: 0 !important;
-		margin-top: -70px !important;
+		&.mt-zero {
+			padding-top: 0 !important;
+			margin-top: -70px !important;
+		}
 	}
 }
 
@@ -60,7 +64,9 @@ section.mod-content.bg-darkblue+section.mod-content.bg-darkblue {
 	section.mod-content.bg-light+section.mod-content.bg-light,
 	section.mod-content.bg-dark+section.mod-content.bg-dark,
 	section.mod-content.bg-darkblue+section.mod-content.bg-darkblue {
-		padding-top: 0 !important;
-		margin-top: -100px !important;
+		&.mt-zero {
+			padding-top: 0 !important;
+			margin-top: -100px !important;
+		}
 	}
 }
