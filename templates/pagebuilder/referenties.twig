@@ -16,12 +16,13 @@
 						<div> {{ referentie.functie }} </div>
 						<h3 style="margin-bottom: 20px"> {{ referentie.titel }} </h3>
 						{{ referentie.beschrijving }}
-                {% if referentie.knop %}
+            
 						<div class="clearfix"></div>
 						<br>
-						<a class="btn-link" target="{{ referentie.knop.target }}" href="{{ referentie.knop.url }}">
-							{{ referentie.knop.title }}
-						</a>
+						{% if referentie.knop %}
+							<a class="btn-link" target="{{ referentie.knop.target }}" href="{{ referentie.knop.url }}">
+								{{ referentie.knop.title }}
+							</a>
 						{% endif %}
 						<br>
 						<br>

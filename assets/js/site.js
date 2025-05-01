@@ -17,11 +17,13 @@ import { scrollto } from './scripts/scrollto.js';
 import { sticky_header } from './scripts/sticky_header.js';
 import { font } from './scripts/font.js';
 import { text_animation } from './scripts/text_animation.js';
+import { simple_parallax } from './scripts/simple_parallax.js';
 
 slick_init();
 matchheight_init();
 font();
 menugrid();
+simple_parallax();
 
 // lity_init();
 

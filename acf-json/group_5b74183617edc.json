@@ -2344,6 +2344,25 @@
                             "max_height": "",
                             "max_size": "",
                             "mime_types": ""
+                        },
+                        {
+                            "key": "field_681335b1fffa7",
+                            "label": "Parallax effect",
+                            "name": "parallax",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
                         }
                     ],
                     "min": "",
@@ -2395,5 +2414,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1741596929
+    "modified": 1746089433
 }

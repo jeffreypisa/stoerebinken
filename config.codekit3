@@ -7,7 +7,7 @@
       "uuidString" : "61584BAE-0918-4335-A9E0-43F804360AAF"
     }
   ],
-  "creatorBuild" : "34680",
+  "creatorBuild" : "34689",
   "files" : {
     "\/.nova\/Publishing\/Stoere Binken Design.json" : {
       "ft" : 524288,
@@ -813,6 +813,17 @@
       "mi" : 1,
       "oA" : 1,
       "oAP" : "\/assets\/js\/scripts\/scrollto-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/assets\/js\/scripts\/simple_parallax.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/assets\/js\/scripts\/simple_parallax-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -10261,8 +10272,6 @@
     "buildFolderActive" : 0,
     "buildFolderName" : "build",
     "cleanBuild" : 1,
-    "cssoForceMediaMerge" : 0,
-    "cssoRestructure" : 1,
     "environmentVariableEntries" : [
       "NODE_ENV:::production"
     ],
