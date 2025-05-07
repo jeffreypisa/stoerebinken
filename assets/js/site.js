@@ -23,7 +23,6 @@ slick_init();
 matchheight_init();
 font();
 menugrid();
-simple_parallax();
 
 // lity_init();
 
@@ -43,6 +42,8 @@ $( document ).ready(function() {
 
 $(window).on('load', function() {
   site_is_loaded();
+  
+  simple_parallax();
   AOS_init(); 	
   
 });
