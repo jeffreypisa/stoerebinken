@@ -49,21 +49,6 @@ function my_acf_flexible_content_layout_title( $title, $field, $layout, $i ) {
 add_filter('acf/fields/flexible_content/layout_title/name=blokken', 'my_acf_flexible_content_layout_title', 10, 4);
 
 
-// WYSIWYG HEIGHT AUTO
-
-add_action('admin_head', 'admin_styles');
-function admin_styles() {
-	?>
-	<style>
-		.mce-edit-area iframe {
-			height: 160px !important;
-		}
-	</style>
-	<?php
-}
- ?>
-<?php
-	
 	// Save author via acf field
 	
  function my_acf_save_post( $post_id ) {
