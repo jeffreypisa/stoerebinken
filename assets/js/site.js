@@ -6,6 +6,8 @@ import { AOS_init } from './scripts/aos_init.js';
 import { slick_init } from './scripts/slick.js';
 import { matchheight_init } from './scripts/matchheight_init.js';
 import { menugrid } from './menugrid/index.js';
+import { comparisonslider_init } from './scripts/comparisonslider_init.js';
+
 // import { lity_init } from './scripts/lity.js';
 
 // Scripts
@@ -22,6 +24,7 @@ import { simple_parallax } from './scripts/simple_parallax.js';
 slick_init();
 matchheight_init();
 font();
+comparisonslider_init();
 menugrid();
 
 // lity_init();

@@ -2135,10 +2135,11 @@
                                         "id": ""
                                     },
                                     "choices": {
-                                        "afbeelding": "afbeelding",
-                                        "video": "video"
+                                        "afbeelding": "Afbeelding",
+                                        "afbeelding_voorna": "Afbeelding voor na slider",
+                                        "video": "Video"
                                     },
-                                    "default_value": [],
+                                    "default_value": false,
                                     "allow_null": 0,
                                     "multiple": 0,
                                     "ui": 0,
@@ -2159,6 +2160,45 @@
                                                 "field": "field_5d9dcff033d35",
                                                 "operator": "==",
                                                 "value": "afbeelding"
+                                            }
+                                        ],
+                                        [
+                                            {
+                                                "field": "field_5d9dcff033d35",
+                                                "operator": "==",
+                                                "value": "afbeelding_voorna"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array",
+                                    "preview_size": "thumbnail",
+                                    "library": "all",
+                                    "min_width": "",
+                                    "min_height": "",
+                                    "min_size": "",
+                                    "max_width": "",
+                                    "max_height": "",
+                                    "max_size": "",
+                                    "mime_types": ""
+                                },
+                                {
+                                    "key": "field_689d9656662e1",
+                                    "label": "Afbeelding na",
+                                    "name": "afbeelding_na",
+                                    "type": "image",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_5d9dcff033d35",
+                                                "operator": "==",
+                                                "value": "afbeelding_voorna"
                                             }
                                         ]
                                     ],
@@ -2414,5 +2454,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1746089433
+    "modified": 1755158150
 }
