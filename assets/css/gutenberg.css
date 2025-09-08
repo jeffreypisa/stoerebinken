@@ -18,10 +18,21 @@
   padding: 40px 30px;
 }
 
+.mod-content.bg-darkgrey .wp-block-table tr:first-child {
+  background: rgba(255, 255, 255, 0.1);
+}
+.mod-content.bg-darkgrey .wp-block-table th td {
+  border-bottom: 1px solid #777777;
+}
+.mod-content.bg-darkgrey .wp-block-table tr td {
+  border-bottom: 1px solid #777777;
+}
+
 .wp-block-table {
   margin-bottom: 40px;
   font-size: 16px;
   line-height: 26px;
+  overflow-x: auto;
 }
 .wp-block-table hr {
   border-top-color: #000319;

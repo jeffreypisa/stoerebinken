@@ -1,7 +1,25 @@
+.mod-content.bg-darkgrey {
+	.wp-block-table {
+		tr:first-child {
+			background: rgba(255,255,255,.1);
+		}
+		th {
+			td {
+				border-bottom: 1px solid #777777;
+			}
+		}
+		tr {
+			td {
+				border-bottom: 1px solid #777777;
+			}
+		}
+	}
+}
 .wp-block-table {
 	margin-bottom: 40px;
 	font-size: 16px;
 	line-height: 26px;
+	overflow-x: auto;
 	hr {
 		border-top-color: $darkblue;
 	}
