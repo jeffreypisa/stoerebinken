@@ -1,30 +1,43 @@
 <section id="{{ item.titel|sanitize|default('strook_' ~ sectionno) }}" class="strook-{{ item.acf_fc_layout }} bg-{{ item.achtergrond|default('grey') }}"">
 	<div class="container">
-		{% if item.titel %}
-		<div class="text-center">
-			<h2 class="mb-4 mb-5">{{ item.titel }}</h2>
-		</div>
-		{% endif %}
-		{% if item.prijsblokken %}
-			<div class="row">
-				{% for item in item.prijsblokken %}
-					<div class="col-md-4">
-						<a href="{{ item.link.url }}" target="{{ item.link.target }}" class="tease-prijsblokken card card-sbdradius bg-white text-dark">
-							<div class="card-body">
-								<div data-mh>
-									<h3 class="text-blue">{{ item.titel }}</h3>
-									{{ item.tekst }}
-									<div class="bg-lightblue p-2 mt-3 mb-3 text-center font-weight-bold">
-										{{ item.prijs }}
+
+		{% if item.prijstabel %}
+			{% set prijstabel = item.prijstabel %}
+			
+			{% if prijstabel.title %}
+				<div class="text-center">
+					<h2 class="mb-4 mb-5">{{ prijstabel.title }}</h2>
+				</div>
+			{% endif %}
+			
+			{% if prijstabel.tekst %}
+				<div class="tekstveld text-center mb-3">
+					{{ prijstabel.tekst }}
+					<i class="fal fa-thumbs-up"></i>
+				</div>
+			{% endif %}
+			
+			{% if prijstabel.prijsblokken %}
+				<div class="row">
+					{% for item in prijstabel.get_field('prijsblokken') %}
+						<div class="col-md-4">
+							<a href="{{ item.link.url }}" target="{{ item.link.target }}" class="tease-prijsblokken card card-sbdradius bg-white text-dark {% if item.uitgelicht %}uitgelicht{% endif %}">
+								<div class="card-body">
+									<div data-mh>
+										<h3 class="text-blue">{{ item.titel }}</h3>
+										{{ item.tekst }}
+										<div class="{% if item.uitgelicht %}bg-lightgreen{% else %}bg-lightblue{% endif %} p-2 mt-3 mb-3 text-center font-weight-bold">
+											{{ item.prijs }}
+										</div>
+										{{ item.usps }}
 									</div>
-									{{ item.usps }}
+									<div class="btn btn-primary btn-block mt-3"> {{ item.link.title }}</div>
 								</div>
-								<div class="btn btn-primary btn-block mt-3"> {{ item.link.title }}</div>
-							</div>
-						</a>
-					</div>
-				{% endfor %}
-			</div>
+							</a>
+						</div>
+					{% endfor %}
+				</div>
+			{% endif %}
 		{% endif %}
 	</div>
 </section>

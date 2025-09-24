@@ -177,6 +177,22 @@
       "oO" : 0,
       "oS" : 1
     },
+    "\/acf-json\/group_68d11cd14296e.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/acf-json\/group_68d11cd14296e-min.json",
+      "oF" : 0,
+      "oO" : 0,
+      "oS" : 1
+    },
+    "\/acf-json\/group_68d11666159ce.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/acf-json\/group_68d11666159ce-min.json",
+      "oF" : 0,
+      "oO" : 0,
+      "oS" : 1
+    },
     "\/acf-json\/nl\/group_5b74183617edc.json" : {
       "ft" : 524288,
       "oA" : 1,
@@ -1319,6 +1335,19 @@
       "oS" : 1,
       "pg" : 0
     },
+    "\/assets\/scss\/gutenberg\/_keypoints.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/scss\/gutenberg\/_keypoints.css",
+      "oF" : 0,
+      "oS" : 1,
+      "pg" : 0
+    },
     "\/assets\/scss\/gutenberg\/_lead.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -1562,6 +1591,31 @@
       "ma" : 0,
       "oA" : 1,
       "oAP" : "\/assets\/scss\/modules\/_header.css",
+      "oF" : 0,
+      "oS" : 1,
+      "pg" : 0
+    },
+    "\/assets\/scss\/modules\/_keypoints.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/scss\/modules\/_keypoints-min.css",
+      "oF" : 0,
+      "pg" : 0
+    },
+    "\/assets\/scss\/modules\/_keypoints.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/scss\/modules\/_keypoints.css",
       "oF" : 0,
       "oS" : 1,
       "pg" : 0
@@ -1916,6 +1970,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/lib\/blocks\/block-font.php",
+      "oF" : 0
+    },
+    "\/lib\/blocks\/block-keypoints.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/lib\/blocks\/block-keypoints.php",
       "oF" : 0
     },
     "\/lib\/blocks\/block-lead.php" : {
@@ -2363,6 +2425,14 @@
       "oAP" : "\/templates\/block\/font.twig",
       "oF" : 0
     },
+    "\/templates\/block\/keypoints.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/templates\/block\/keypoints.twig",
+      "oF" : 0
+    },
     "\/templates\/block\/lead.twig" : {
       "cB" : 0,
       "ft" : 8192,
@@ -2585,6 +2655,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/templates\/pagebuilder\/foto-slider.twig",
+      "oF" : 0
+    },
+    "\/templates\/pagebuilder\/keypoints.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/templates\/pagebuilder\/keypoints.twig",
       "oF" : 0
     },
     "\/templates\/pagebuilder\/klanten.twig" : {

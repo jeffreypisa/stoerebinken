@@ -31,7 +31,10 @@
 
 	{% elseif item.acf_fc_layout == 'klanten' %}
 		{% include 'pagebuilder/klanten.twig' %}
-
+		
+	{% elseif item.acf_fc_layout == 'keypoints' %}
+		{% include 'pagebuilder/keypoints.twig' %}
+	
 	{% elseif item.acf_fc_layout == 'lead' %}
 		{% include 'pagebuilder/lead.twig' %}
 		

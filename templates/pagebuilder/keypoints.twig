@@ -1,0 +1,46 @@
+<section class="section{{ sectionno }} mod-content bg-{{ item.achtergrond }} {% if item.geen_ruimte_tussen_content_strook_hierboven %}mt-zero{% endif %}">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-10 col-lg-8 ">
+				{% if item.titel %}
+				<h2 class="h1xl">{{ item.titel }}</h2>
+				{% endif %}
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-2">
+				{% if item.button %}
+				<a class="btn-link d-none d-lg-inline-block" target="{{ item.button.target }}" href="{{ item.button.url }}" data-aos="fade-right" data-aos-duration="800">
+					{{ item.button.title }}
+				</a>
+				{% endif %}
+			</div>
+			<div class="col-md-10 col-lg-8">
+				{% if item.lead %}
+					<div class="lead">{{ item.lead }}</div>
+				{% endif %}
+				<div class="mod-keypoints gb-keypoints">
+					<h3>{{ item.keypoints_titel }}</h3>
+					{{ item.keypoints_tekst }}
+					{% if item.keypoints_lijst %}
+						<ul class="list-unstyled lijst mb-0">
+							{% for item in item.keypoints_lijst %}
+								<li>
+									<i class="fas fa-check"></i>
+									{{ item.tekst }}
+								</li>
+							{% endfor %}
+						</ul>
+					{% endif %}
+				</div>
+				{{ item.tekst }}
+			</div>
+		</div>
+		{% if item.button %}
+		<br>
+		<a class="btn-link d-lg-none" target="{{ item.button.target }}" href="{{ item.button.url }}">
+			{{ item.button.title }}
+		</a>
+		{% endif %}
+	</div>
+</section>

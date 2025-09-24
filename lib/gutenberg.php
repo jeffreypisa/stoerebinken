@@ -20,6 +20,7 @@ include 'blocks/block-youtube.php';
 include 'blocks/block-lead.php'; 
 include 'blocks/block-break.php'; 
 include 'blocks/block-font.php'; 
+include 'blocks/block-keypoints.php'; 
 include 'blocks/block-posts.php'; 
 
 /* Gutenberg editor

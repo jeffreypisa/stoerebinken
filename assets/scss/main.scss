@@ -29,6 +29,7 @@ Text Domain: myproject
 @import 'gutenberg/lead';
 @import 'gutenberg/quote';
 @import 'gutenberg/font';
+@import 'gutenberg/keypoints';
 
 @import 'common/base';
 @import 'common/blog';
@@ -78,6 +79,7 @@ Text Domain: myproject
 @import 'modules/biglink';
 @import 'modules/projecten-uitgelicht';
 @import 'modules/prijsblokken';
+@import 'modules/keypoints';
 
 @import 'plugins/slick';
 @import 'plugins/wpml';

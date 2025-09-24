@@ -1,7 +1,57 @@
 .strook-prijsblokken {
+	.tekstveld {
+		font-size: 14px;
+	}
+	.fa-thumbs-up {
+		width: 32px;
+		height: 32px;
+		display: inline-block;
+		background: $freshgreen;
+		color: #fff;
+		border-radius: 100px;
+		line-height: 32px;
+		text-align: center;
+		font-size: 14px;
+		margin-left: 6px;
+	}
+	.tease-prijsblokken:hover {
+		box-shadow: none;
+	}
 	.tease-prijsblokken:hover .btn {
 		background-color: rgb(51, 188.6, 255);
 		border-color: rgb(51, 188.6, 255);
+	}
+	.tease-prijsblokken.uitgelicht {
+		position: relative;
+		box-shadow: 0px 30px 60px 0px $blue;
+		h3 {
+			color: $freshgreen !important;
+		}
+		.card-body {
+			position: relative;
+			z-index: 1;
+		}
+		&:before {
+			content: '';
+			z-index: 0;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			height: 200px;
+			background: #ADE9AD;
+			background: linear-gradient(180deg,rgba(208, 243, 208, 1) 0%, rgba(255, 255, 255, 1) 100%);
+		}
+		.btn-primary {
+			background: $freshgreen !important;
+		}
+		
+		&:hover {
+			.btn-primary,
+			.btn-primary:hover {
+				background: lighten($freshgreen, 5%) !important;
+			}
+		}
 	}
 	ul {
 		list-style: none; /* Verwijder standaard opsommingstekens */
@@ -29,7 +79,7 @@
 		content: "\f058"; /* Font Awesome checked-circle icoon */
 		font-family: "Font Awesome 5 Free";
 		font-weight: 900; /* Zorgt ervoor dat het solid icoon wordt geladen */
-		color: $dark; /* Blauwe kleur, pas aan naar wens */
+		color: $freshgreen; /* Blauwe kleur, pas aan naar wens */
 		font-size: 1.2rem; /* Grootte van het icoon */
 		position: absolute;
 		left: 0;

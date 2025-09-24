@@ -1,0 +1,28 @@
+{#
+/**
+ * Block Name: Keypoints
+ *
+ * This is the template that displays the example block.
+ */
+#}
+
+<div id="block-{{ block.id }}" class="mod-keypoints gb-keypoints">
+	<h3>{{ fields.titel }}</h3>
+	{{ fields.tekst }}
+	{% if fields.lijst %}
+		<ul class="list-unstyled lijst mb-0">
+			{% for item in fields.lijst %}
+				<li>
+					<i class="fas fa-check"></i>
+					{{ item.tekst }}
+				</li>
+			{% endfor %}
+		</ul>
+	{% endif %}
+</div>
+
+<style type="text/css">
+	#block-{{ block.id }} {
+		
+	}
+</style>
