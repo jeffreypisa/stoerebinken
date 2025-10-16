@@ -3,14 +3,14 @@
 	<div class="row">
 	  {% for item in item.afbeeldingen %}
 		{% if item.groot %}
-		  <div class="col-12" data-aos="fade-up">
+		  <div class="col-12" data-aos="fade-up" style="display: inline-flex;">
 			{% if item.type == 'video' %}
-			  <div class="video-container mb-5 {% if item.schaduw %} with-shadow {% endif %}">
+			  <div class="video-container mb-30 {% if item.schaduw %} with-shadow {% endif %}">
 				{{ item.video }}
 			  </div>
 
 			{% elseif item.type == 'afbeelding_voorna' %}
-			  <img-comparison-slider class="mb-5{% if item.schaduw %} with-shadow{% endif %}">
+			  <img-comparison-slider class="mb-30{% if item.schaduw %} with-shadow{% endif %}">
 				<img slot="first"
 					 src="{{ Image(item.afbeelding).src|resize(1920) }}"
 					 srcset="{{ Image(item.afbeelding).srcset }}"
@@ -35,12 +35,12 @@
 		{% else %}
 		  <div class="col-md-6" data-aos="fade-up">
 			{% if item.type == 'video' %}
-			  <div class="video-container mb-5 {% if item.schaduw %} with-shadow {% endif %}">
+			  <div class="video-container mb-30 {% if item.schaduw %} with-shadow {% endif %}">
 				{{ item.video }}
 			  </div>
 
 			{% elseif item.type == 'afbeelding_voorna' %}
-			  <img-comparison-slider class="mb-5{% if item.schaduw %} with-shadow{% endif %}">
+			  <img-comparison-slider class="mb-30{% if item.schaduw %} with-shadow{% endif %}">
 				<img slot="first"
 					 src="{{ Image(item.afbeelding).src|resize(768) }}"
 					 alt="{{ Image(item.afbeelding).alt|default('Voor') }}"

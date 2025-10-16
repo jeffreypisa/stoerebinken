@@ -10,11 +10,11 @@
   	<div class="col-lg-2">
   		{% if item.button %}
     		<a class="btn-link d-none d-lg-inline-block" target="{{ item.button.target }}" href="{{ item.button.url }}" data-aos="fade-right" data-aos-duration="800">
-					{{ item.button.title }} 
-				</a>
-			{% endif %}
+			{{ item.button.title }} 
+			</a>
+		{% endif %}
   	</div>
-		<div class="col-md-10 col-lg-8">
+	<div class="col-md-10 col-lg-8">
     	{{ item.tekst }}
     	{% if item.kolommen %}
 		  	<br>

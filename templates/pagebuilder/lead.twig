@@ -1,12 +1,17 @@
 <section class="section{{ sectionno }} mod-lead bg-{{ item.achtergrond }}">
-  <div class="container">
-	  <div class="row">
+	<div class="container">
+		<div class="row">
 			<div class="col-lg-8 col-lg-8">
-	    	{{ item.tekst }}
+				{{ item.tekst }}
+				{% if item.button %}
+					<a class="btn btn-primary" target="{{ item.button.target }}" href="{{ item.button.url }}">
+						{{ item.button.title }}
+					</a>
+				{% endif %}
 			</div>
-	  	<div class="col-lg-4">
-	  		{% include 'partials/author.twig' %}
-	  	</div>
+			<div class="col-lg-4">
+				{% include 'partials/author.twig' %}
+			</div>
 		</div>
-  </div>
+	</div>
 </section>

@@ -80,6 +80,24 @@
 	}
 }
 
+.bg-lightblue {
+	background: $lightblue;	
+  color: $dark;
+  p, h1,h2,h3,h4,h5,
+  .h1,.h2,.h3,.h4,.h5 {
+	  color: $dark;
+  }
+  .h1xl {
+	  color: $dark;
+  }
+  .btn-link:not(.btn) { 
+		color: $dark;
+		&:hover {
+			color: $blue;
+		}
+	}
+}
+
 .bg-blue {
 	a:not(.btn) { 
 		color: $darkgrey;
